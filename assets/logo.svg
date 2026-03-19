@@ -1,13 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
-  <!-- Teal arrow going up -->
-  <path d="M30 90 Q35 60 50 45 Q60 35 65 25 L72 10 L78 18 L70 30 Q65 40 58 50 Q48 65 45 85 Z" fill="#1a9b8a"/>
-  <polygon points="65,8 80,22 72,15" fill="#1a9b8a"/>
-  <!-- Amber/gold middle wave -->
-  <path d="M25 95 Q40 55 55 45 Q65 38 70 32 L75 40 Q68 48 58 55 Q42 68 35 95 Z" fill="#e8a838"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110" fill="none">
+  <!-- Icon: Three flowing waves rising upward, the top one is an arrow -->
+
   <!-- Dark navy bottom wave -->
-  <path d="M20 105 Q30 75 45 60 Q55 50 62 42 L68 50 Q60 58 50 68 Q35 82 28 105 Z" fill="#0c2340"/>
-  <!-- Company name text -->
-  <text x="100" y="42" font-family="'Inter', Arial, sans-serif" font-size="26" font-weight="700" fill="#0c2340" letter-spacing="1">ENERGETIC</text>
-  <text x="100" y="72" font-family="'Inter', Arial, sans-serif" font-size="26" font-weight="700" fill="#0c2340" letter-spacing="1">MANAGEMENT</text>
-  <text x="100" y="102" font-family="'Inter', Arial, sans-serif" font-size="26" font-weight="700" fill="#0c2340" letter-spacing="1">CONSULTING</text>
+  <path d="M15 95 C20 82, 26 68, 34 58 C42 48, 48 40, 52 32 C54 28, 55 25, 56 22 L60 28 C58 32, 56 36, 52 42 C46 50, 38 58, 32 68 C26 78, 22 86, 20 95 Z" fill="#0c2340"/>
+
+  <!-- Amber/gold middle wave -->
+  <path d="M24 92 C28 76, 36 60, 44 48 C50 38, 54 30, 58 22 C59 19, 60 17, 61 14 L66 22 C64 26, 62 30, 58 36 C52 46, 44 56, 38 66 C32 76, 28 84, 26 92 Z" fill="#e8a838"/>
+
+  <!-- Teal arrow (top wave with arrowhead) -->
+  <path d="M32 88 C36 72, 44 54, 52 42 C58 32, 62 24, 66 16 C68 12, 69 9, 70 6 L72 4 L78 12 L74 14 C72 18, 70 22, 66 28 C60 38, 52 48, 46 58 C40 68, 36 78, 34 88 Z" fill="#1a9b8a"/>
+  <!-- Arrowhead -->
+  <polygon points="64,2 80,14 72,4" fill="#1a9b8a"/>
+
+  <!-- Company name text - stacked -->
+  <text x="100" y="38" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="800" fill="#0c2340" letter-spacing="2">ENERGETIC</text>
+  <text x="100" y="66" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="800" fill="#0c2340" letter-spacing="2">MANAGEMENT</text>
+  <text x="100" y="94" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="800" fill="#0c2340" letter-spacing="2">CONSULTING</text>
 </svg>

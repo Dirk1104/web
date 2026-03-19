@@ -1,7 +1,7 @@
 /* ============================================
    ENERGETIC MANAGEMENT CONSULTING — Website Styles
-   Colors derived from company logo:
-   Teal (#1a9b8a), Amber (#e8a838), Navy (#0c2340)
+   Professional black & white palette
+   Logo accent colors used sparingly
    ============================================ */
 
 /* --- Reset & Base --- */
@@ -12,27 +12,27 @@
 }
 
 :root {
-    --color-primary: #0c2340;
-    --color-primary-light: #1a3a5c;
-    --color-primary-dark: #061526;
+    --color-primary: #111111;
+    --color-primary-light: #2a2a2a;
+    --color-primary-dark: #000000;
     --color-teal: #1a9b8a;
     --color-teal-light: #25b8a4;
     --color-teal-dark: #148072;
     --color-accent: #e8a838;
     --color-accent-light: #f0c060;
     --color-accent-dark: #d4952b;
-    --color-bg: #f8f9fa;
-    --color-bg-alt: #eef1f5;
+    --color-bg: #ffffff;
+    --color-bg-alt: #f5f5f5;
     --color-surface: #ffffff;
-    --color-text: #1a1a2e;
-    --color-text-secondary: #4a5568;
-    --color-text-light: #718096;
-    --color-border: #e2e8f0;
+    --color-text: #111111;
+    --color-text-secondary: #444444;
+    --color-text-light: #777777;
+    --color-border: #e0e0e0;
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --shadow-sm: 0 1px 3px rgba(12,35,64,0.06), 0 1px 2px rgba(12,35,64,0.04);
-    --shadow-md: 0 4px 12px rgba(12,35,64,0.08), 0 2px 6px rgba(12,35,64,0.04);
-    --shadow-lg: 0 12px 36px rgba(12,35,64,0.1), 0 4px 12px rgba(12,35,64,0.05);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.07), 0 2px 6px rgba(0,0,0,0.03);
+    --shadow-lg: 0 12px 36px rgba(0,0,0,0.09), 0 4px 12px rgba(0,0,0,0.04);
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 20px;
@@ -69,7 +69,7 @@ ul { list-style: none; }
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid transparent;
@@ -135,22 +135,22 @@ ul { list-style: none; }
 }
 
 .nav-link:hover {
-    color: var(--color-teal);
-    background: rgba(26, 155, 138, 0.06);
+    color: var(--color-primary);
+    background: rgba(0, 0, 0, 0.04);
 }
 
 .nav-link.active {
-    color: var(--color-teal);
+    color: var(--color-primary);
 }
 
 .nav-link--cta {
-    background: var(--color-teal);
+    background: var(--color-primary);
     color: #fff !important;
     margin-left: 8px;
 }
 
 .nav-link--cta:hover {
-    background: var(--color-teal-light) !important;
+    background: var(--color-primary-light) !important;
 }
 
 /* Language Switcher */
@@ -182,11 +182,11 @@ ul { list-style: none; }
 }
 
 .lang-btn:hover {
-    color: var(--color-teal);
+    color: var(--color-primary);
 }
 
 .lang-btn.active {
-    background: var(--color-teal);
+    background: var(--color-primary);
     color: #fff;
 }
 
@@ -227,7 +227,7 @@ ul { list-style: none; }
 .hero-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #0c2340 0%, #1a3a5c 40%, #0c2340 70%, #061526 100%);
+    background: linear-gradient(135deg, #111111 0%, #1a1a1a 40%, #0a0a0a 100%);
 }
 
 .hero-pattern {
@@ -240,7 +240,7 @@ ul { list-style: none; }
     background-size: 60px 60px;
 }
 
-/* Decorative teal/amber accents on hero */
+/* Subtle light accents on hero */
 .hero-bg::after {
     content: '';
     position: absolute;
@@ -249,7 +249,7 @@ ul { list-style: none; }
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(26, 155, 138, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
     z-index: 1;
 }
 
@@ -261,7 +261,7 @@ ul { list-style: none; }
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(232, 168, 56, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
     z-index: 1;
 }
 
@@ -278,7 +278,7 @@ ul { list-style: none; }
 .hero-greeting {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--color-teal-light);
+    color: rgba(255,255,255,0.6);
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 12px;
@@ -302,7 +302,7 @@ ul { list-style: none; }
 
 .hero-subtitle {
     font-size: 1rem;
-    color: var(--color-accent-light);
+    color: rgba(255,255,255,0.5);
     font-weight: 500;
     margin-bottom: 40px;
 }
@@ -330,7 +330,7 @@ ul { list-style: none; }
     font-family: var(--font-heading);
     font-size: 2.4rem;
     font-weight: 700;
-    color: var(--color-accent);
+    color: rgba(255,255,255,0.5);
     line-height: 1;
 }
 
@@ -366,14 +366,14 @@ ul { list-style: none; }
 }
 
 .btn-primary {
-    background: var(--color-accent);
-    color: var(--color-primary-dark);
+    background: #ffffff;
+    color: #111111;
 }
 
 .btn-primary:hover {
-    background: var(--color-accent-light);
+    background: #f0f0f0;
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(232, 168, 56, 0.3);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
 }
 
 .btn-outline {
@@ -383,8 +383,8 @@ ul { list-style: none; }
 }
 
 .btn-outline:hover {
-    border-color: var(--color-teal-light);
-    background: rgba(26, 155, 138, 0.15);
+    border-color: #fff;
+    background: rgba(255,255,255,0.08);
     transform: translateY(-2px);
 }
 
@@ -444,14 +444,14 @@ ul { list-style: none; }
 }
 
 .hero-icon-item:hover {
-    background: rgba(26, 155, 138, 0.12);
-    border-color: rgba(26, 155, 138, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.15);
     transform: translateY(-3px);
 }
 
 .hero-icon-item i {
     font-size: 1.6rem;
-    color: var(--color-teal-light);
+    color: rgba(255,255,255,0.7);
 }
 
 .hero-icon-item span {
@@ -507,7 +507,7 @@ ul { list-style: none; }
 .section-header i {
     display: block;
     font-size: 2rem;
-    color: var(--color-teal);
+    color: var(--color-text-light);
     margin-bottom: 12px;
 }
 
@@ -517,13 +517,14 @@ ul { list-style: none; }
     gap: 6px;
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--color-teal);
+    color: var(--color-text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    background: rgba(26, 155, 138, 0.08);
+    background: var(--color-bg-alt);
     padding: 6px 16px;
     border-radius: 50px;
     margin-bottom: 16px;
+    border: 1px solid var(--color-border);
 }
 
 .section-tag i {
@@ -616,7 +617,7 @@ ul { list-style: none; }
 }
 
 .tag i {
-    color: var(--color-teal);
+    color: var(--color-text-light);
     font-size: 0.85rem;
 }
 
@@ -642,7 +643,7 @@ ul { list-style: none; }
 .highlight-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
-    border-color: var(--color-teal);
+    border-color: var(--color-primary);
 }
 
 .highlight-icon {
@@ -651,14 +652,14 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(26, 155, 138, 0.1);
+    background: var(--color-bg-alt);
     border-radius: var(--radius-sm);
     margin-bottom: 14px;
 }
 
 .highlight-icon i {
     font-size: 1.1rem;
-    color: var(--color-teal);
+    color: var(--color-primary);
 }
 
 .highlight-card h4 {
@@ -702,7 +703,7 @@ ul { list-style: none; }
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-teal), var(--color-accent));
+    background: var(--color-primary);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -723,19 +724,24 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(26, 155, 138, 0.08);
+    background: var(--color-bg-alt);
     border-radius: var(--radius-sm);
     margin-bottom: 16px;
     transition: var(--transition);
 }
 
 .competency-card:hover .competency-icon {
-    background: rgba(26, 155, 138, 0.15);
+    background: var(--color-primary);
+}
+
+.competency-card:hover .competency-icon i {
+    color: #fff;
 }
 
 .competency-icon i {
     font-size: 1.3rem;
-    color: var(--color-teal);
+    color: var(--color-primary);
+    transition: var(--transition);
 }
 
 .competency-number {
@@ -748,7 +754,7 @@ ul { list-style: none; }
 }
 
 .competency-card:hover .competency-number {
-    color: var(--color-accent);
+    color: var(--color-text-light);
 }
 
 .competency-card h3 {
@@ -783,7 +789,7 @@ ul { list-style: none; }
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, var(--color-teal), var(--color-border));
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-border));
 }
 
 .timeline-item {
@@ -806,15 +812,15 @@ ul { list-style: none; }
     height: 16px;
     border-radius: 50%;
     background: var(--color-surface);
-    border: 3px solid var(--color-teal);
+    border: 3px solid var(--color-primary);
     position: relative;
     z-index: 1;
 }
 
 .current-dot {
-    background: var(--color-teal);
-    border-color: var(--color-teal);
-    box-shadow: 0 0 0 4px rgba(26, 155, 138, 0.2);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-content {
@@ -827,7 +833,7 @@ ul { list-style: none; }
 
 .timeline-content:hover {
     box-shadow: var(--shadow-md);
-    border-color: rgba(26, 155, 138, 0.2);
+    border-color: rgba(0, 0, 0, 0.15);
 }
 
 .timeline-badge {
@@ -837,7 +843,7 @@ ul { list-style: none; }
     font-size: 0.75rem;
     font-weight: 700;
     color: #fff;
-    background: var(--color-teal);
+    background: var(--color-primary);
     padding: 4px 12px;
     border-radius: 50px;
     text-transform: uppercase;
@@ -877,13 +883,13 @@ ul { list-style: none; }
 
 .timeline-content h3 i {
     font-size: 0.9rem;
-    color: var(--color-teal);
+    color: var(--color-text-light);
 }
 
 .timeline-content h4 {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--color-teal);
+    color: var(--color-text-secondary);
     margin-bottom: 6px;
 }
 
@@ -902,17 +908,18 @@ ul { list-style: none; }
 
 .timeline-highlight {
     display: inline-block;
-    background: rgba(232, 168, 56, 0.12);
-    color: var(--color-accent-dark);
+    background: var(--color-bg-alt);
+    color: var(--color-text-secondary);
     font-size: 0.85rem;
     font-weight: 600;
     padding: 6px 14px;
     border-radius: 50px;
     margin-bottom: 12px;
+    border: 1px solid var(--color-border);
 }
 
 .timeline-highlight span {
-    color: var(--color-teal-dark);
+    color: var(--color-primary);
     font-weight: 700;
 }
 
@@ -945,7 +952,7 @@ ul { list-style: none; }
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: var(--color-accent);
+    background: var(--color-primary);
 }
 
 .timeline-achievements li strong {
@@ -977,7 +984,7 @@ ul { list-style: none; }
 .education-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
-    border-color: var(--color-teal);
+    border-color: var(--color-primary);
 }
 
 .education-icon {
@@ -986,14 +993,14 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(26, 155, 138, 0.08);
+    background: var(--color-bg-alt);
     border-radius: 50%;
     margin: 0 auto 20px;
 }
 
 .education-icon i {
     font-size: 1.5rem;
-    color: var(--color-teal);
+    color: var(--color-primary);
 }
 
 .education-card h3 {
@@ -1006,7 +1013,7 @@ ul { list-style: none; }
 .education-degree {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--color-teal);
+    color: var(--color-text-secondary);
     margin-bottom: 12px;
 }
 
@@ -1049,7 +1056,7 @@ ul { list-style: none; }
 .contact-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
-    border-color: var(--color-teal);
+    border-color: var(--color-primary);
 }
 
 .contact-icon {
@@ -1058,14 +1065,14 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(26, 155, 138, 0.08);
+    background: var(--color-bg-alt);
     border-radius: 50%;
     margin-bottom: 16px;
 }
 
 .contact-icon i {
     font-size: 1.3rem;
-    color: var(--color-teal);
+    color: var(--color-primary);
 }
 
 .contact-card h3 {
@@ -1085,7 +1092,7 @@ ul { list-style: none; }
 
 /* --- Footer --- */
 .footer {
-    background: var(--color-primary-dark);
+    background: #111111;
     padding: 32px 0;
 }
 
