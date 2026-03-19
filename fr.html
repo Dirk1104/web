@@ -44,6 +44,48 @@
         </div>
     </nav>
 
+    <!-- News Ticker Carousel -->
+    <div class="news-ticker" id="news">
+        <div class="news-ticker-label">
+            <i class="fas fa-bolt"></i>
+            <span>Actualit&eacute;s &Eacute;nergie Europe</span>
+            <span class="news-ticker-date">19 mar 2026</span>
+        </div>
+        <div class="news-ticker-track">
+            <div class="news-ticker-slides" id="newsSlides">
+                <div class="news-ticker-slide active">
+                    <span class="news-ticker-tag"><i class="fas fa-fire"></i> Gaz</span>
+                    <span class="news-ticker-headline">Le TTF bondit de 57% &agrave; 49,80 &euro;/MWh suite aux perturbations GNL du Qatar. Stockage UE &agrave; 30% &mdash; NL 10%, DE 20%.</span>
+                </div>
+                <div class="news-ticker-slide">
+                    <span class="news-ticker-tag"><i class="fas fa-bolt"></i> &Eacute;lectricit&eacute;</span>
+                    <span class="news-ticker-headline">Les dirigeants UE d&eacute;battent du d&eacute;couplage &eacute;lectricit&eacute;-gaz au sommet de mars. Co&ucirc;ts UE d&eacute;sormais 2x le niveau US.</span>
+                </div>
+                <div class="news-ticker-slide">
+                    <span class="news-ticker-tag"><i class="fas fa-leaf"></i> CO2</span>
+                    <span class="news-ticker-headline">Prix carbone EUA au-dessus de 66 &euro;/tonne. R&eacute;forme ETS domine l'agenda du Conseil europ&eacute;en (16&ndash;20 mars).</span>
+                </div>
+                <div class="news-ticker-slide">
+                    <span class="news-ticker-tag"><i class="fas fa-oil-can"></i> P&eacute;trole</span>
+                    <span class="news-ticker-headline">Le Brent bondit &agrave; 85 $/baril sur tensions au d&eacute;troit d'Ormuz. L'OPEP+ maintient la pause. GS rel&egrave;ve pr&eacute;vision T2 &agrave; 76 $.</span>
+                </div>
+                <div class="news-ticker-slide">
+                    <span class="news-ticker-tag"><i class="fas fa-battery-full"></i> Stockage</span>
+                    <span class="news-ticker-headline">Stocks gaz UE &agrave; ~26% fin mars. Injections estivales agressives n&eacute;cessaires pour atteindre 90% avant l'hiver.</span>
+                </div>
+                <div class="news-ticker-slide">
+                    <span class="news-ticker-tag"><i class="fas fa-solar-panel"></i> Transition</span>
+                    <span class="news-ticker-headline">La Su&egrave;de menace de limiter ses exportations d'&eacute;lectricit&eacute; dans le diff&eacute;rend sur les fonds UE. March&eacute;s nordiques en risque.</span>
+                </div>
+            </div>
+        </div>
+        <div class="news-ticker-nav">
+            <button class="news-ticker-btn" id="newsPrev" aria-label="Pr&eacute;c&eacute;dent"><i class="fas fa-chevron-left"></i></button>
+            <button class="news-ticker-btn" id="newsNext" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <a href="https://www.energymarketprice.com/home/en/news/1178262" target="_blank" rel="noopener" class="news-ticker-source"><i class="fas fa-external-link-alt"></i></a>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-bg">
@@ -119,58 +161,6 @@
         <div class="scroll-indicator">
             <span>Défiler pour explorer</span>
             <div class="scroll-arrow"></div>
-        </div>
-    </section>
-
-    <!-- Energy News Section -->
-    <section class="section energy-news" id="news">
-        <div class="container">
-            <div class="section-header">
-                <i class="fas fa-newspaper"></i>
-                <span class="section-tag"><i class="fas fa-bolt"></i> Veille Sectorielle</span>
-                <h2 class="section-title">Actualit&eacute;s de l'Industrie &Eacute;nerg&eacute;tique Europ&eacute;enne</h2>
-                <p class="section-description">Les d&eacute;veloppements cl&eacute;s qui fa&ccedil;onnent les march&eacute;s &eacute;nerg&eacute;tiques en Europe &mdash; synth&egrave;se quotidienne.</p>
-            </div>
-            <div class="news-date-bar">
-                <i class="far fa-calendar-alt"></i>
-                <span>Mercredi, 19 mars 2026</span>
-                <a href="https://www.energymarketprice.com/home/en/news/1178262" target="_blank" rel="noopener" class="news-source-link"><i class="fas fa-external-link-alt"></i> Source : EnergyMarketPrice</a>
-            </div>
-            <div class="news-grid">
-                <article class="news-card news-card--featured">
-                    <div class="news-card-tag"><i class="fas fa-fire"></i> March&eacute;s du Gaz</div>
-                    <h3>Le TTF bondit de 57% suite aux perturbations de l'approvisionnement en GNL</h3>
-                    <p>Les prix du gaz TTF front-month ont grimp&eacute; &agrave; 49,80 &euro;/MWh, en hausse de 57% depuis fin f&eacute;vrier. Les perturbations des installations GNL du Qatar &mdash; repr&eacute;sentant ~20% de la production mondiale &mdash; ont s&eacute;v&egrave;rement resserr&eacute; l'offre. Le stockage de gaz de l'UE n'est qu'&agrave; 30% en moyenne, avec les Pays-Bas &agrave; 10% et l'Allemagne &agrave; 20%.</p>
-                </article>
-                <article class="news-card">
-                    <div class="news-card-tag"><i class="fas fa-bolt"></i> March&eacute;s de l'&Eacute;lectricit&eacute;</div>
-                    <h3>Les dirigeants europ&eacute;ens d&eacute;battent du d&eacute;couplage &eacute;lectricit&eacute;-gaz</h3>
-                    <p>Avec des prix de l'&eacute;lectricit&eacute; dans l'UE d&eacute;sormais le double de ceux aux &Eacute;tats-Unis, les dirigeants europ&eacute;ens ont discut&eacute; d'options pour r&eacute;duire les co&ucirc;ts &eacute;nerg&eacute;tiques lors du sommet de mars, notamment le d&eacute;couplage &eacute;lectricit&eacute;-gaz.</p>
-                </article>
-                <article class="news-card">
-                    <div class="news-card-tag"><i class="fas fa-leaf"></i> Renouvelables</div>
-                    <h3>Les prix du carbone europ&eacute;en augmentent avec les tensions au Moyen-Orient</h3>
-                    <p>Les prix du carbone europ&eacute;en (EUA) ont d&eacute;pass&eacute; 66 &euro;/tonne alors que le TTF affichait des gains cons&eacute;cutifs. La pression politique sur le syst&egrave;me d'&eacute;change de quotas d'&eacute;mission (ETS) domine les discussions au Conseil europ&eacute;en du 16&ndash;20 mars.</p>
-                </article>
-                <article class="news-card">
-                    <div class="news-card-tag"><i class="fas fa-oil-can"></i> P&eacute;trole &amp; OPEP</div>
-                    <h3>Le Brent bondit &agrave; 85 $/baril ; l'OPEP+ maintient la pause de production</h3>
-                    <p>Le Brent a grimp&eacute; d'environ 4% &agrave; 85 $/baril en raison des tensions g&eacute;opolitiques autour du d&eacute;troit d'Ormuz. L'OPEP+ devrait maintenir sa pause de production. Goldman Sachs a relev&eacute; sa pr&eacute;vision Brent pour le T2 2026 de 10 $ &agrave; 76 $/baril.</p>
-                </article>
-                <article class="news-card">
-                    <div class="news-card-tag"><i class="fas fa-battery-full"></i> Stockage</div>
-                    <h3>L'Europe face &agrave; un d&eacute;ficit critique de stockage de gaz</h3>
-                    <p>Les stocks de gaz de l'UE devraient tomber &agrave; ~26% fin mars, n&eacute;cessitant des injections estivales agressives pour atteindre 90% avant l'hiver. Le stockage bas, notamment en Allemagne (20%), France (29%) et Pays-Bas (10%), maintient la pression sur les courbes forward.</p>
-                </article>
-                <article class="news-card">
-                    <div class="news-card-tag"><i class="fas fa-solar-panel"></i> Transition &Eacute;nerg&eacute;tique</div>
-                    <h3>La Su&egrave;de menace de limiter ses exportations d'&eacute;lectricit&eacute;</h3>
-                    <p>La Su&egrave;de a indiqu&eacute; qu'elle pourrait restreindre ses exportations d'&eacute;lectricit&eacute; vers les pays voisins si les diff&eacute;rends avec la Commission europ&eacute;enne concernant les fonds nationaux ne sont pas r&eacute;solus. Cela pourrait impacter significativement les march&eacute;s de l'&eacute;lectricit&eacute; en Europe du Nord.</p>
-                </article>
-            </div>
-            <div class="news-footer">
-                <p>Pour des donn&eacute;es compl&egrave;tes sur les march&eacute;s &eacute;nerg&eacute;tiques, visitez <a href="https://www.energymarketprice.com" target="_blank" rel="noopener">EnergyMarketPrice.com</a></p>
-            </div>
         </div>
     </section>
 
@@ -346,151 +336,57 @@
         <div class="container">
             <div class="section-header">
                 <i class="fas fa-route"></i>
-                <span class="section-tag"><i class="fas fa-briefcase"></i> Parcours Professionnel</span>
-                <h2 class="section-title">Expérience Professionnelle</h2>
+                <span class="section-tag"><i class="fas fa-briefcase"></i> Parcours Prouv&eacute;</span>
+                <h2 class="section-title">Les Entreprises Qui M'Ont Fait Confiance</h2>
             </div>
 
-            <div class="timeline">
-                <!-- Current Engagements -->
-                <div class="timeline-item current">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot current-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="timeline-badge"><i class="fas fa-circle" style="font-size:6px;"></i> Actuel</span>
-                        <div class="timeline-roles">
-                            <div class="timeline-role">
-                                <h3><i class="fas fa-building"></i> Directeur Général</h3>
-                                <h4>Codel — B2B Gas Supplier</h4>
-                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> August 2025 – Present</span>
-                                <p>Responsabilité P&L complète pour un fournisseur de gaz B2B belge, rapportant au conseil d'administration du holding.</p>
-                            </div>
-                            <div class="timeline-role">
-                                <h3><i class="fas fa-project-diagram"></i> Directeur – Chef de Projet</h3>
-                                <h4>Aya Energy</h4>
-                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> July 2025 – Present</span>
-                                <p>Direction du projet de développement de plateforme pour un cabinet de conseil en approvisionnement énergétique — contrats de fourniture, PPA, CPPA, contrats flex et reporting carbone.</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="exp-grid">
+                <div class="exp-card exp-card--current">
+                    <div class="exp-card-badge">Actuel</div>
+                    <h3 class="exp-card-company">Codel</h3>
+                    <p class="exp-card-role">m'a engag&eacute; comme <strong>Directeur G&eacute;n&eacute;ral</strong></p>
+                    <p class="exp-card-summary">Responsabilit&eacute; P&L compl&egrave;te pour un fournisseur de gaz B2B belge, strat&eacute;gie commerciale et reporting au conseil du holding.</p>
                 </div>
-
-                <!-- Sympower -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3><i class="fas fa-compass"></i> Directeur Pays, Pays-Bas</h3>
-                        <h4>Sympower</h4>
-                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> June 2024 – July 2025</span>
-                        <p>Direction de l'entrée sur le marché et de la stratégie commerciale pour un fournisseur européen de services d'équilibrage sur le marché néerlandais des énergies renouvelables.</p>
-                        <ul class="timeline-achievements">
-                            <li>Évaluation du potentiel de marché et développement de plans commerciaux complets</li>
-                            <li>Construction d'une stratégie d'entrée incluant des canaux de vente directs et indirects</li>
-                            <li>Orientation stratégique s'appuyant sur une expertise approfondie du marché de l'énergie</li>
-                            <li>Soutien de l'équipe existante et des opérations pendant la transition stratégique</li>
-                        </ul>
-                    </div>
+                <div class="exp-card exp-card--current">
+                    <div class="exp-card-badge">Actuel</div>
+                    <h3 class="exp-card-company">Aya Energy</h3>
+                    <p class="exp-card-role">m'a engag&eacute; comme <strong>Directeur &amp; Chef de Projet</strong></p>
+                    <p class="exp-card-summary">Direction du d&eacute;veloppement de plateforme pour un cabinet de conseil en approvisionnement &eacute;nerg&eacute;tique &mdash; contrats, PPA, flex et reporting carbone.</p>
                 </div>
-
-                <!-- EnergyMarketPrice -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3><i class="fas fa-lightbulb"></i> Co-Fondateur & Directeur Général</h3>
-                        <h4>EnergyMarketPrice.com</h4>
-                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> November 2011 – October 2023</span>
-                        <div class="timeline-highlight">
-                            <span>12 Years</span> | Entreprise SaaS — De la Création à la Sortie Rentable
-                        </div>
-                        <p>Direction d'une entreprise SaaS de la création à la sortie rentable, fournissant des solutions digitales pour les fournisseurs d'énergie, consultants en approvisionnement et utilisateurs industriels sur les marchés européens.</p>
-                        <ul class="timeline-achievements">
-                            <li>Organisation construite et développée jusqu'à la rentabilité avec <strong>30% de croissance annuelle du CA</strong> (2020–2023)</li>
-                            <li>Gestion des opérations internationales avec des équipes en Moldavie et en Tunisie</li>
-                            <li>Définition de la stratégie produit, de l'approche go-to-market et des cadres KPI</li>
-                            <li>Sortie réussie de l'entreprise à maturité après avoir atteint les objectifs stratégiques</li>
-                        </ul>
-                    </div>
+                <div class="exp-card">
+                    <h3 class="exp-card-company">Sympower</h3>
+                    <p class="exp-card-role">m'a engag&eacute; comme <strong>Directeur Pays, Pays-Bas</strong></p>
+                    <p class="exp-card-summary">Direction de l'entr&eacute;e sur le march&eacute; et de la strat&eacute;gie commerciale pour ce fournisseur europ&eacute;en de services d'&eacute;quilibrage sur le march&eacute; n&eacute;erlandais.</p>
                 </div>
-
-                <!-- E.ON / Uniper -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3><i class="fas fa-industry"></i> Directeur Général (Intérim)</h3>
-                        <h4>E.ON Belgium / Uniper Belgium</h4>
-                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> October 2014 – August 2020</span>
-                        <p>Direction des opérations commerciales et liquidation complète de l'entité B2B belge d'un multinational énergétique allemand.</p>
-                        <ul class="timeline-achievements">
-                            <li>Lancement de l'offre gaz B2B et transformation des performances commerciales</li>
-                            <li>Sélection et gestion des fournisseurs IT pour une implémentation ERP lead-to-cash complète</li>
-                            <li>Processus de liquidation complexe mené — terminé dans les délais, <strong>40% sous budget</strong></li>
-                            <li>Maintien de la motivation et de la rétention de l'équipe pendant la phase de clôture</li>
-                        </ul>
-                    </div>
+                <div class="exp-card">
+                    <h3 class="exp-card-company">EnergyMarketPrice.com</h3>
+                    <p class="exp-card-role">m'a engag&eacute; comme <strong>Co-Fondateur &amp; Directeur G&eacute;n&eacute;ral</strong></p>
+                    <p class="exp-card-summary">Entreprise SaaS construite de la cr&eacute;ation &agrave; la sortie rentable sur 12 ans. 30%+ de croissance annuelle du CA pour fournisseurs d'&eacute;nergie et consultants en Europe.</p>
                 </div>
-
-                <!-- EDF -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3><i class="fas fa-bolt"></i> Directeur Mid-Market (Directeur des Ventes)</h3>
-                        <h4>EDF Belgium (Electricite de France)</h4>
-                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> January 2005 – July 2008</span>
-                        <p>Construction et direction des opérations commerciales et marketing pour l'entrée sur le marché belge d'un grand groupe énergétique français.</p>
-                        <ul class="timeline-achievements">
-                            <li>Développement de la stratégie commerciale et marketing pour une entrée greenfield</li>
-                            <li>Recrutement, formation et gestion d'équipes performantes</li>
-                            <li>Promu Directeur Mid-Market avec des responsabilités P&L élargies</li>
-                            <li>Établissement réussi d'une ligne d'activité rentable sur un marché concurrentiel</li>
-                        </ul>
-                    </div>
+                <div class="exp-card">
+                    <h3 class="exp-card-company">E.ON / Uniper Belgium</h3>
+                    <p class="exp-card-role">m'a engag&eacute; comme <strong>Directeur G&eacute;n&eacute;ral (Int&eacute;rim)</strong></p>
+                    <p class="exp-card-summary">Op&eacute;rations commerciales et liquidation compl&egrave;te de l'entit&eacute; B2B belge de ce multinational &eacute;nerg&eacute;tique allemand &mdash; dans les d&eacute;lais et 40% sous budget.</p>
                 </div>
-
-                <!-- Gate2Growth -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3><i class="fas fa-seedling"></i> Directeur Général</h3>
-                        <h4>Gate2Growth</h4>
-                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> February 2003 – January 2005</span>
-                        <p>Plateforme connectant entrepreneurs et investisseurs. Gestion d'équipe d'analystes avec responsabilité P&L complète et relations avec les projets de la Commission européenne.</p>
-                    </div>
+                <div class="exp-card">
+                    <h3 class="exp-card-company">EDF Belgium</h3>
+                    <p class="exp-card-role">m'a engag&eacute; comme <strong>Directeur Mid-Market</strong></p>
+                    <p class="exp-card-summary">Construction et direction de l'op&eacute;ration commerciale et marketing compl&egrave;te pour l'entr&eacute;e de ce grand groupe &eacute;nerg&eacute;tique fran&ccedil;ais sur le march&eacute; belge.</p>
                 </div>
-
-                <!-- Pythagoras -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3><i class="fas fa-coins"></i> Directeur d'Investissement</h3>
-                        <h4>Pythagoras Participations (Venture Capital)</h4>
-                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> June 2000 – November 2002</span>
-                        <p>Gestion d'investissements technologiques en phase initiale (fonds de €50M) avec supervision au niveau du conseil. Administrateur de plusieurs sociétés et direction d'initiatives de levée de fonds.</p>
-                    </div>
+                <div class="exp-card">
+                    <h3 class="exp-card-company">Gate2Growth</h3>
+                    <p class="exp-card-role">m'a engag&eacute; comme <strong>Directeur G&eacute;n&eacute;ral</strong></p>
+                    <p class="exp-card-summary">Gestion d'&eacute;quipe d'analystes avec P&L complet pour cette plateforme UE connectant entrepreneurs et investisseurs.</p>
                 </div>
-
-                <!-- Mobistar -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3><i class="fas fa-mobile-alt"></i> Responsable Régional au Directeur des Ventes</h3>
-                        <h4>Mobistar (now Orange Belgium)</h4>
-                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> 1996 – 2000</span>
-                        <p>Progression rapide de la gestion de comptes au leadership commercial pendant l'expansion des télécoms mobiles. Création, construction et gestion de la chaîne exclusive Mobistar Center depuis sa conception.</p>
-                    </div>
+                <div class="exp-card">
+                    <h3 class="exp-card-company">Pythagoras Participations</h3>
+                    <p class="exp-card-role">m'a engag&eacute; comme <strong>Directeur d'Investissement</strong></p>
+                    <p class="exp-card-summary">Gestion d'investissements technologiques en phase initiale (fonds VC de &euro;50M) avec supervision au niveau du conseil.</p>
+                </div>
+                <div class="exp-card">
+                    <h3 class="exp-card-company">Mobistar <small>(devenu Orange Belgium)</small></h3>
+                    <p class="exp-card-role">m'a engag&eacute; comme <strong>Directeur des Ventes</strong></p>
+                    <p class="exp-card-summary">Progression rapide vers le leadership commercial. Cr&eacute;ation, construction et gestion de la cha&icirc;ne exclusive Mobistar Center.</p>
                 </div>
             </div>
         </div>

@@ -44,6 +44,48 @@
         </div>
     </nav>
 
+    <!-- News Ticker Carousel -->
+    <div class="news-ticker" id="news">
+        <div class="news-ticker-label">
+            <i class="fas fa-bolt"></i>
+            <span>European Energy News</span>
+            <span class="news-ticker-date">19 Mar 2026</span>
+        </div>
+        <div class="news-ticker-track">
+            <div class="news-ticker-slides" id="newsSlides">
+                <div class="news-ticker-slide active">
+                    <span class="news-ticker-tag"><i class="fas fa-fire"></i> Gas</span>
+                    <span class="news-ticker-headline">TTF surges 57% to &euro;49.80/MWh as Qatar LNG disruptions tighten supply. EU storage at 30% &mdash; NL 10%, DE 20%.</span>
+                </div>
+                <div class="news-ticker-slide">
+                    <span class="news-ticker-tag"><i class="fas fa-bolt"></i> Power</span>
+                    <span class="news-ticker-headline">EU leaders debate decoupling electricity from gas prices at March summit. EU power costs now 2x the US level.</span>
+                </div>
+                <div class="news-ticker-slide">
+                    <span class="news-ticker-tag"><i class="fas fa-leaf"></i> Carbon</span>
+                    <span class="news-ticker-headline">EUA carbon prices climb above &euro;66/tonne. ETS reform dominates European Council agenda (16&ndash;20 March).</span>
+                </div>
+                <div class="news-ticker-slide">
+                    <span class="news-ticker-tag"><i class="fas fa-oil-can"></i> Oil</span>
+                    <span class="news-ticker-headline">Brent spikes to $85/bbl on Strait of Hormuz tensions. OPEC+ holds production pause. GS raises Q2 forecast to $76.</span>
+                </div>
+                <div class="news-ticker-slide">
+                    <span class="news-ticker-tag"><i class="fas fa-battery-full"></i> Storage</span>
+                    <span class="news-ticker-headline">EU gas inventories to fall to ~26% by end-March. Aggressive summer injections needed to reach 90% before winter.</span>
+                </div>
+                <div class="news-ticker-slide">
+                    <span class="news-ticker-tag"><i class="fas fa-solar-panel"></i> Transition</span>
+                    <span class="news-ticker-headline">Sweden threatens electricity export limits over EU fund dispute. Northern European power markets at risk.</span>
+                </div>
+            </div>
+        </div>
+        <div class="news-ticker-nav">
+            <button class="news-ticker-btn" id="newsPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <button class="news-ticker-btn" id="newsNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <a href="https://www.energymarketprice.com/home/en/news/1178262" target="_blank" rel="noopener" class="news-ticker-source"><i class="fas fa-external-link-alt"></i></a>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-bg">
@@ -119,58 +161,6 @@
         <div class="scroll-indicator">
             <span>Scroll to explore</span>
             <div class="scroll-arrow"></div>
-        </div>
-    </section>
-
-    <!-- Energy News Section -->
-    <section class="section energy-news" id="news">
-        <div class="container">
-            <div class="section-header">
-                <i class="fas fa-newspaper"></i>
-                <span class="section-tag"><i class="fas fa-bolt"></i> Industry Insights</span>
-                <h2 class="section-title">European Energy Industry News</h2>
-                <p class="section-description">Key developments shaping energy markets across Europe &mdash; curated daily.</p>
-            </div>
-            <div class="news-date-bar">
-                <i class="far fa-calendar-alt"></i>
-                <span>Wednesday, 19 March 2026</span>
-                <a href="https://www.energymarketprice.com/home/en/news/1178262" target="_blank" rel="noopener" class="news-source-link"><i class="fas fa-external-link-alt"></i> Source: EnergyMarketPrice</a>
-            </div>
-            <div class="news-grid">
-                <article class="news-card news-card--featured">
-                    <div class="news-card-tag"><i class="fas fa-fire"></i> Gas Markets</div>
-                    <h3>TTF Gas Surges 57% as LNG Supply Disruptions Tighten European Markets</h3>
-                    <p>Dutch TTF front-month gas prices have spiked to &euro;49.80/MWh, up 57% since late February. Disruptions at Qatar's LNG facilities &mdash; which account for ~20% of global LNG output &mdash; have severely tightened supply. EU gas storage sits at just 30% on average, with the Netherlands at 10% and Germany at 20%, well below seasonal norms.</p>
-                </article>
-                <article class="news-card">
-                    <div class="news-card-tag"><i class="fas fa-bolt"></i> Power Markets</div>
-                    <h3>EU Leaders Debate Decoupling Electricity from Gas Prices</h3>
-                    <p>With EU electricity prices now double those in the US, European leaders discussed options to reduce power costs at the March summit, including decoupling electricity from gas prices and addressing negative energy price episodes. Exposure varies: gas influences electricity prices in 89% of hours in Italy vs. just 15% in Spain.</p>
-                </article>
-                <article class="news-card">
-                    <div class="news-card-tag"><i class="fas fa-leaf"></i> Renewables</div>
-                    <h3>EU Carbon Prices Rise Amid Middle East Tensions &amp; Energy Rally</h3>
-                    <p>European carbon prices (EUA) climbed above &euro;66/tonne as TTF gas posted consecutive gains. The intensifying political pressure on the EU Emissions Trading System (ETS) dominates discussions at the March 16&ndash;20 European Council meeting, alongside concerns about energy affordability and competitiveness.</p>
-                </article>
-                <article class="news-card">
-                    <div class="news-card-tag"><i class="fas fa-oil-can"></i> Oil &amp; OPEC</div>
-                    <h3>Brent Spikes to $85/bbl; OPEC+ Holds Production Pause</h3>
-                    <p>Brent crude surged ~4% to $85/bbl on geopolitical tensions around the Strait of Hormuz. OPEC+ is likely to maintain its production pause to stabilise markets. Goldman Sachs raised its Q2 2026 Brent forecast by $10 to $76/bbl, while Wood Mackenzie's base case averages $59/bbl for the full year.</p>
-                </article>
-                <article class="news-card">
-                    <div class="news-card-tag"><i class="fas fa-battery-full"></i> Storage</div>
-                    <h3>Europe Faces Critical Gas Storage Gap Ahead of Summer Refilling</h3>
-                    <p>EU gas inventories are projected to fall to ~26% by end of March, implying aggressive summer injections are needed to reach 90% before next winter. Low storage, particularly in Germany (20%), France (29%) and the Netherlands (10%), keeps upward pressure on forward gas curves and adds urgency to EU energy security discussions.</p>
-                </article>
-                <article class="news-card">
-                    <div class="news-card-tag"><i class="fas fa-solar-panel"></i> Energy Transition</div>
-                    <h3>Sweden Threatens to Limit Electricity Exports Over EU Fund Dispute</h3>
-                    <p>Sweden indicated it may restrict electricity exports to neighbouring countries if disputes with the European Commission regarding allocation of national funds for EU energy initiatives are not resolved. Such a move could significantly impact power markets across Northern Europe, as Sweden exports surplus nuclear, hydro and renewable energy to Germany, Denmark and Finland.</p>
-                </article>
-            </div>
-            <div class="news-footer">
-                <p>For comprehensive energy market data, prices, and analysis visit <a href="https://www.energymarketprice.com" target="_blank" rel="noopener">EnergyMarketPrice.com</a></p>
-            </div>
         </div>
     </section>
 
@@ -346,151 +336,57 @@
         <div class="container">
             <div class="section-header">
                 <i class="fas fa-route"></i>
-                <span class="section-tag"><i class="fas fa-briefcase"></i> Career Journey</span>
-                <h2 class="section-title">Professional Experience</h2>
+                <span class="section-tag"><i class="fas fa-briefcase"></i> Track Record</span>
+                <h2 class="section-title">Companies That Trusted My Leadership</h2>
             </div>
 
-            <div class="timeline">
-                <!-- Current Engagements -->
-                <div class="timeline-item current">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot current-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="timeline-badge"><i class="fas fa-circle" style="font-size:6px;"></i> Current</span>
-                        <div class="timeline-roles">
-                            <div class="timeline-role">
-                                <h3><i class="fas fa-building"></i> General Manager</h3>
-                                <h4>Codel — B2B Gas Supplier</h4>
-                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> August 2025 – Present</span>
-                                <p>Full P&L responsibility for Belgian B2B gas supplier, reporting to holding company board.</p>
-                            </div>
-                            <div class="timeline-role">
-                                <h3><i class="fas fa-project-diagram"></i> Director – Project Manager</h3>
-                                <h4>Aya Energy</h4>
-                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> July 2025 – Present</span>
-                                <p>Leading platform development project for energy procurement consultancy, delivering contract transparency and reporting solutions — supply contracts, PPA, CPPA, flex contracts, and carbon reporting.</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="exp-grid">
+                <div class="exp-card exp-card--current">
+                    <div class="exp-card-badge">Current</div>
+                    <h3 class="exp-card-company">Codel</h3>
+                    <p class="exp-card-role">engaged me as <strong>General Manager</strong></p>
+                    <p class="exp-card-summary">Full P&L responsibility for Belgian B2B gas supplier, driving commercial strategy and reporting to the holding company board.</p>
                 </div>
-
-                <!-- Sympower -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3><i class="fas fa-compass"></i> Country Director, Netherlands</h3>
-                        <h4>Sympower</h4>
-                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> June 2024 – July 2025</span>
-                        <p>Directed market entry and commercial strategy for European balance service provider in the Dutch renewable energy market.</p>
-                        <ul class="timeline-achievements">
-                            <li>Evaluated market potential and developed comprehensive commercial plans</li>
-                            <li>Built market entry strategy including direct and indirect sales channels</li>
-                            <li>Provided strategic guidance leveraging deep energy market expertise</li>
-                            <li>Supported existing team and operations during strategic transition</li>
-                        </ul>
-                    </div>
+                <div class="exp-card exp-card--current">
+                    <div class="exp-card-badge">Current</div>
+                    <h3 class="exp-card-company">Aya Energy</h3>
+                    <p class="exp-card-role">engaged me as <strong>Director &amp; Project Manager</strong></p>
+                    <p class="exp-card-summary">Leading platform development for energy procurement consultancy &mdash; delivering transparency across supply contracts, PPAs, flex contracts, and carbon reporting.</p>
                 </div>
-
-                <!-- EnergyMarketPrice -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3><i class="fas fa-lightbulb"></i> Co-Founder & Managing Director</h3>
-                        <h4>EnergyMarketPrice.com</h4>
-                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> November 2011 – October 2023</span>
-                        <div class="timeline-highlight">
-                            <span>12 Years</span> | SaaS Company — From Inception to Profitable Exit
-                        </div>
-                        <p>Led SaaS company from inception to profitable exit, providing digital solutions for energy suppliers, procurement consultants, and industrial users across European markets.</p>
-                        <ul class="timeline-achievements">
-                            <li>Built and scaled organization to profitability with <strong>30% YoY revenue growth</strong> (2020–2023)</li>
-                            <li>Managed international operations with teams across Moldova and Tunisia</li>
-                            <li>Defined product strategy, go-to-market approach, and KPI frameworks</li>
-                            <li>Successfully exited company at maturity after achieving strategic objectives</li>
-                        </ul>
-                    </div>
+                <div class="exp-card">
+                    <h3 class="exp-card-company">Sympower</h3>
+                    <p class="exp-card-role">engaged me as <strong>Country Director, Netherlands</strong></p>
+                    <p class="exp-card-summary">Directed market entry and commercial strategy for this European balance service provider into the Dutch renewable energy market.</p>
                 </div>
-
-                <!-- E.ON / Uniper -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3><i class="fas fa-industry"></i> Managing Director (Interim)</h3>
-                        <h4>E.ON Belgium / Uniper Belgium</h4>
-                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> October 2014 – August 2020</span>
-                        <p>Led commercial operations and full company liquidation for German energy multinational's Belgian B2B entity.</p>
-                        <ul class="timeline-achievements">
-                            <li>Launched B2B gas offering and transformed sales performance</li>
-                            <li>Selected and managed IT vendors for complete lead-to-cash ERP implementation</li>
-                            <li>Led complex liquidation process — completed on time, <strong>40% under budget</strong></li>
-                            <li>Maintained team motivation and retention during wind-down phase</li>
-                        </ul>
-                    </div>
+                <div class="exp-card">
+                    <h3 class="exp-card-company">EnergyMarketPrice.com</h3>
+                    <p class="exp-card-role">engaged me as <strong>Co-Founder &amp; Managing Director</strong></p>
+                    <p class="exp-card-summary">Built SaaS company from inception to profitable exit over 12 years. Achieved 30%+ YoY revenue growth serving energy suppliers and procurement consultants across Europe.</p>
                 </div>
-
-                <!-- EDF -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3><i class="fas fa-bolt"></i> Head of Mid Market (Director of Sales)</h3>
-                        <h4>EDF Belgium (Electricite de France)</h4>
-                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> January 2005 – July 2008</span>
-                        <p>Built and led sales and marketing operations from ground zero for French energy major's Belgian market entry.</p>
-                        <ul class="timeline-achievements">
-                            <li>Developed sales and marketing strategy for greenfield market entry</li>
-                            <li>Recruited, trained, and managed high-performing teams</li>
-                            <li>Promoted to Head of Mid Market with expanded P&L responsibilities</li>
-                            <li>Successfully established profitable business line in competitive market</li>
-                        </ul>
-                    </div>
+                <div class="exp-card">
+                    <h3 class="exp-card-company">E.ON / Uniper Belgium</h3>
+                    <p class="exp-card-role">engaged me as <strong>Managing Director (Interim)</strong></p>
+                    <p class="exp-card-summary">Led commercial operations and managed the full company liquidation for this German energy multinational's Belgian B2B entity &mdash; completed on time and 40% under budget.</p>
                 </div>
-
-                <!-- Gate2Growth -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3><i class="fas fa-seedling"></i> Managing Director</h3>
-                        <h4>Gate2Growth</h4>
-                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> February 2003 – January 2005</span>
-                        <p>Platform connecting entrepreneurs and investors. Managed business analyst team with full P&L responsibility and European Commission project relationships.</p>
-                    </div>
+                <div class="exp-card">
+                    <h3 class="exp-card-company">EDF Belgium</h3>
+                    <p class="exp-card-role">engaged me as <strong>Head of Mid Market</strong></p>
+                    <p class="exp-card-summary">Built and led the full sales and marketing operation from ground zero for this French energy major's entry into the Belgian market.</p>
                 </div>
-
-                <!-- Pythagoras -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3><i class="fas fa-coins"></i> Investment Manager</h3>
-                        <h4>Pythagoras Participations (Venture Capital)</h4>
-                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> June 2000 – November 2002</span>
-                        <p>Managed early-stage technology investments (&#8364;50M fund) with board-level portfolio company oversight. Served as board director for multiple companies and led capital raising initiatives.</p>
-                    </div>
+                <div class="exp-card">
+                    <h3 class="exp-card-company">Gate2Growth</h3>
+                    <p class="exp-card-role">engaged me as <strong>Managing Director</strong></p>
+                    <p class="exp-card-summary">Managed business analyst team with full P&L for this EU-backed platform connecting entrepreneurs and investors.</p>
                 </div>
-
-                <!-- Mobistar -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3><i class="fas fa-mobile-alt"></i> Regional Account Manager to Sales Manager</h3>
-                        <h4>Mobistar (now Orange Belgium)</h4>
-                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> 1996 – 2000</span>
-                        <p>Rapid progression from account management to sales leadership during mobile telecom expansion. Defined, built, and managed the exclusive Mobistar Center retail chain from inception.</p>
-                    </div>
+                <div class="exp-card">
+                    <h3 class="exp-card-company">Pythagoras Participations</h3>
+                    <p class="exp-card-role">engaged me as <strong>Investment Manager</strong></p>
+                    <p class="exp-card-summary">Managed early-stage technology investments (&euro;50M VC fund) with board-level oversight of portfolio companies.</p>
+                </div>
+                <div class="exp-card">
+                    <h3 class="exp-card-company">Mobistar <small>(now Orange Belgium)</small></h3>
+                    <p class="exp-card-role">engaged me as <strong>Sales Manager</strong></p>
+                    <p class="exp-card-summary">Rapid progression from account management to sales leadership. Defined, built, and managed the exclusive Mobistar Center retail chain.</p>
                 </div>
             </div>
         </div>

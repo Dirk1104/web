@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addFadeIn = () => {
         const selectors = [
             '.about-text', '.highlight-card', '.competency-card',
-            '.timeline-item', '.education-card', '.contact-card'
+            '.exp-card', '.education-card', '.contact-card'
         ];
 
         document.querySelectorAll(selectors.join(',')).forEach(el => {
@@ -117,6 +117,46 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+    // --- News Ticker Carousel ---
+    const slides = document.querySelectorAll('.news-ticker-slide');
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        let tickerInterval;
+
+        const showSlide = (index) => {
+            slides.forEach(s => {
+                s.classList.remove('active', 'exit-up');
+            });
+            slides[currentSlide].classList.add('exit-up');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        };
+
+        const startTicker = () => {
+            tickerInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+        };
+
+        const prevBtn = document.getElementById('newsPrev');
+        const nextBtn = document.getElementById('newsNext');
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                clearInterval(tickerInterval);
+                showSlide(currentSlide + 1);
+                startTicker();
+            });
+        }
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                clearInterval(tickerInterval);
+                showSlide(currentSlide - 1);
+                startTicker();
+            });
+        }
+
+        startTicker();
+    }
 
     // --- Smooth scroll for anchor links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

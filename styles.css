@@ -41,7 +41,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 120px;
 }
 
 body {
@@ -343,7 +343,7 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding-top: 72px;
+    padding-top: 112px;
 }
 
 .hero-bg {
@@ -633,150 +633,228 @@ ul { list-style: none; }
     line-height: 1.7;
 }
 
-/* --- Energy News Section --- */
-.energy-news {
-    background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
-    color: #fff;
+/* --- News Ticker Carousel --- */
+.news-ticker {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #0a0a0a;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    height: 40px;
+    overflow: hidden;
 }
 
-.energy-news .section-header i {
-    color: rgba(255,255,255,0.4);
-}
-
-.energy-news .section-tag {
-    background: rgba(255,255,255,0.06);
-    border-color: rgba(255,255,255,0.1);
-    color: rgba(255,255,255,0.7);
-}
-
-.energy-news .section-tag i {
-    color: rgba(255,255,255,0.5);
-}
-
-.energy-news .section-title {
-    color: #fff;
-}
-
-.energy-news .section-description {
-    color: rgba(255,255,255,0.5);
-}
-
-.news-date-bar {
+.news-ticker-label {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.4);
-    margin-bottom: 32px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 0 16px;
+    background: var(--color-teal);
+    height: 100%;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.news-date-bar i {
-    font-size: 0.8rem;
+.news-ticker-label i {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.8);
 }
 
-.news-source-link {
-    margin-left: auto;
-    color: rgba(255,255,255,0.35);
-    font-size: 0.75rem;
+.news-ticker-label span {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.news-ticker-date {
+    color: rgba(255,255,255,0.5) !important;
+    font-weight: 500 !important;
+    margin-left: 4px;
+}
+
+.news-ticker-track {
+    flex: 1;
+    overflow: hidden;
+    padding: 0 16px;
+    position: relative;
+}
+
+.news-ticker-slides {
+    position: relative;
+    height: 40px;
+}
+
+.news-ticker-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
     display: flex;
     align-items: center;
-    gap: 5px;
-    transition: color 0.3s ease;
-}
-
-.news-source-link:hover {
-    color: rgba(255,255,255,0.7);
-}
-
-.news-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.news-card {
-    padding: 28px 30px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: var(--radius-md);
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(100%);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.news-card:hover {
-    background: rgba(255,255,255,0.06);
-    border-color: rgba(255,255,255,0.12);
-    transform: translateY(-3px);
+.news-ticker-slide.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.news-card--featured {
-    grid-column: 1 / -1;
-    background: rgba(255,255,255,0.05);
-    border-color: rgba(255,255,255,0.1);
-    padding: 36px 36px;
+.news-ticker-slide.exit-up {
+    opacity: 0;
+    transform: translateY(-100%);
 }
 
-.news-card--featured h3 {
-    font-size: 1.25rem;
-}
-
-.news-card-tag {
+.news-ticker-tag {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 0.68rem;
-    font-weight: 600;
-    color: rgba(255,255,255,0.5);
+    gap: 4px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.6);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 12px;
-    padding: 4px 12px;
-    background: rgba(255,255,255,0.06);
+    letter-spacing: 0.08em;
+    padding: 3px 8px;
+    background: rgba(255,255,255,0.08);
     border-radius: 50px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.news-card-tag i {
-    font-size: 0.7rem;
+.news-ticker-tag i {
+    font-size: 0.55rem;
     color: var(--color-teal-light);
 }
 
-.news-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.05rem;
+.news-ticker-headline {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-ticker-nav {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 0 8px;
+    flex-shrink: 0;
+}
+
+.news-ticker-btn {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.3);
+    cursor: pointer;
+    padding: 4px 6px;
+    font-size: 0.65rem;
+    transition: color 0.2s ease;
+    line-height: 1;
+}
+
+.news-ticker-btn:hover {
+    color: rgba(255,255,255,0.8);
+}
+
+.news-ticker-source {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    color: rgba(255,255,255,0.2);
+    font-size: 0.65rem;
+    transition: color 0.2s ease;
+    flex-shrink: 0;
+    height: 100%;
+    border-left: 1px solid rgba(255,255,255,0.06);
+}
+
+.news-ticker-source:hover {
+    color: rgba(255,255,255,0.6);
+}
+
+/* --- Experience Cards --- */
+.exp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.exp-card {
+    padding: 28px 28px;
+    background: var(--color-bg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.exp-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+}
+
+.exp-card--current {
+    border-color: var(--color-primary);
+}
+
+.exp-card-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 0.6rem;
     font-weight: 700;
     color: #fff;
-    line-height: 1.35;
+    background: var(--color-primary);
+    padding: 3px 10px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.exp-card-company {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.exp-card-company small {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-text-light);
+}
+
+.exp-card-role {
+    font-size: 0.82rem;
+    color: var(--color-text-light);
     margin-bottom: 10px;
+    line-height: 1.4;
 }
 
-.news-card p {
-    font-size: 0.88rem;
-    color: rgba(255,255,255,0.55);
-    line-height: 1.65;
+.exp-card-role strong {
+    color: var(--color-text);
+    font-weight: 700;
 }
 
-.news-footer {
-    text-align: center;
-    margin-top: 36px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-}
-
-.news-footer p {
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.3);
-}
-
-.news-footer a {
-    color: rgba(255,255,255,0.5);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    transition: color 0.3s ease;
-}
-
-.news-footer a:hover {
-    color: rgba(255,255,255,0.8);
+.exp-card-summary {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
 }
 
 /* --- Section Illustrations --- */
@@ -1476,25 +1554,27 @@ ul { list-style: none; }
     .competencies-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .exp-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
-    .news-grid {
+    .news-ticker-label span:not(.news-ticker-date) {
+        display: none;
+    }
+
+    .news-ticker-date {
+        margin-left: 0 !important;
+    }
+
+    .news-ticker-headline {
+        font-size: 0.72rem;
+    }
+
+    .exp-grid {
         grid-template-columns: 1fr;
-    }
-
-    .news-card--featured {
-        grid-column: 1;
-    }
-
-    .news-date-bar {
-        flex-wrap: wrap;
-    }
-
-    .news-source-link {
-        margin-left: 0;
-        margin-top: 4px;
-        width: 100%;
     }
 
     .nav-menu {
