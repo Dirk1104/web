@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100" fill="none">
+  <!-- Teal arrow going up -->
+  <path d="M30 85 Q38 50 50 38 Q58 28 62 18 L68 5 L75 15 L67 25 Q60 35 52 45 Q40 60 38 82 Z" fill="#1a9b8a"/>
+  <polygon points="62,3 78,18 70,12" fill="#1a9b8a"/>
+  <!-- Amber/gold middle wave -->
+  <path d="M22 92 Q35 50 50 40 Q60 32 65 22 L70 32 Q63 42 52 52 Q36 66 30 90 Z" fill="#e8a838"/>
+  <!-- Dark navy bottom wave -->
+  <path d="M15 100 Q25 70 42 55 Q52 45 58 35 L64 45 Q56 55 45 65 Q30 78 22 98 Z" fill="#0c2340"/>
+</svg>

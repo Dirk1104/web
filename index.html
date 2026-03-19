@@ -8,25 +8,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
 </head>
 <body>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">DW</a>
+            <a href="#hero" class="nav-logo">
+                <img src="assets/logo-icon.svg" alt="Energetic Management Consulting">
+                <span class="nav-logo-text">Energetic<br>Management<br>Consulting</span>
+            </a>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#competencies" class="nav-link">Expertise</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link nav-link--cta">Get in Touch</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#competencies" class="nav-link"><i class="fas fa-star"></i> Expertise</a></li>
+                <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#contact" class="nav-link nav-link--cta"><i class="fas fa-envelope"></i> Get in Touch</a></li>
+                <li>
+                    <div class="lang-switcher">
+                        <a href="index.html" class="lang-btn active">EN</a>
+                        <a href="nl.html" class="lang-btn">NL</a>
+                        <a href="fr.html" class="lang-btn">FR</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -39,10 +51,10 @@
         </div>
         <div class="container hero-content">
             <div class="hero-text">
-                <p class="hero-greeting">Hello, I'm</p>
+                <p class="hero-greeting"><i class="fas fa-bolt"></i> Hello, I'm</p>
                 <h1 class="hero-name">Dirk Wouters</h1>
                 <h2 class="hero-title">Senior Executive Leader</h2>
-                <p class="hero-subtitle">Commercial &amp; Operational Excellence in Energy</p>
+                <p class="hero-subtitle"><i class="fas fa-chart-line"></i> Commercial &amp; Operational Excellence in Energy</p>
                 <div class="hero-stats">
                     <div class="stat">
                         <span class="stat-number" data-target="25">0</span><span class="stat-plus">+</span>
@@ -58,27 +70,31 @@
                     </div>
                 </div>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Let's Connect</a>
-                    <a href="#experience" class="btn btn-outline">View Experience</a>
+                    <a href="#contact" class="btn btn-primary"><i class="fas fa-handshake"></i> Let's Connect</a>
+                    <a href="#experience" class="btn btn-outline"><i class="fas fa-arrow-right"></i> View Experience</a>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="hero-card">
+                    <div class="hero-logo-display">
+                        <img src="assets/logo-icon.svg" alt="EMC Logo">
+                        <span>Energetic Management Consulting</span>
+                    </div>
                     <div class="hero-icon-grid">
                         <div class="hero-icon-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            <i class="fas fa-bolt"></i>
                             <span>Energy</span>
                         </div>
                         <div class="hero-icon-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 2a8 8 0 0 1 7.74 6H4.26A8 8 0 0 1 12 4zm0 16a8 8 0 0 1-7.74-6h15.48A8 8 0 0 1 12 20z"/><path d="M2 12h20"/></svg>
+                            <i class="fas fa-globe-europe"></i>
                             <span>International</span>
                         </div>
                         <div class="hero-icon-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            <i class="fas fa-users"></i>
                             <span>Leadership</span>
                         </div>
                         <div class="hero-icon-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                            <i class="fas fa-chart-line"></i>
                             <span>Growth</span>
                         </div>
                     </div>
@@ -95,48 +111,84 @@
     <section class="section about" id="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">About Me</span>
+                <i class="fas fa-user-tie"></i>
+                <span class="section-tag"><i class="fas fa-info-circle"></i> About Me</span>
                 <h2 class="section-title">Driving Energy Transformation</h2>
             </div>
+
+            <!-- Inline SVG illustration: Abstract energy/growth concept -->
+            <div class="section-illustration">
+                <svg viewBox="0 0 400 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Landscape with wind turbines and solar panels -->
+                    <!-- Ground -->
+                    <ellipse cx="200" cy="160" rx="180" ry="20" fill="#eef1f5"/>
+                    <!-- Hills -->
+                    <path d="M20 160 Q80 110 140 145 Q200 100 260 140 Q320 105 380 160Z" fill="#d4edda" opacity="0.5"/>
+                    <!-- Sun -->
+                    <circle cx="320" cy="40" r="25" fill="#e8a838" opacity="0.25"/>
+                    <circle cx="320" cy="40" r="18" fill="#e8a838" opacity="0.4"/>
+                    <!-- Wind turbine 1 -->
+                    <rect x="98" y="70" width="4" height="85" rx="2" fill="#1a9b8a" opacity="0.7"/>
+                    <line x1="100" y1="70" x2="100" y2="30" stroke="#1a9b8a" stroke-width="2" opacity="0.7"/>
+                    <line x1="100" y1="30" x2="75" y2="50" stroke="#1a9b8a" stroke-width="2" opacity="0.7"/>
+                    <line x1="100" y1="30" x2="125" y2="50" stroke="#1a9b8a" stroke-width="2" opacity="0.7"/>
+                    <circle cx="100" cy="30" r="3" fill="#1a9b8a" opacity="0.7"/>
+                    <!-- Wind turbine 2 -->
+                    <rect x="178" y="55" width="4" height="95" rx="2" fill="#0c2340" opacity="0.5"/>
+                    <line x1="180" y1="55" x2="180" y2="18" stroke="#0c2340" stroke-width="2" opacity="0.5"/>
+                    <line x1="180" y1="18" x2="155" y2="38" stroke="#0c2340" stroke-width="2" opacity="0.5"/>
+                    <line x1="180" y1="18" x2="205" y2="38" stroke="#0c2340" stroke-width="2" opacity="0.5"/>
+                    <circle cx="180" cy="18" r="3" fill="#0c2340" opacity="0.5"/>
+                    <!-- Solar panels -->
+                    <rect x="240" y="130" width="30" height="4" rx="1" fill="#1a9b8a" opacity="0.6" transform="rotate(-15 255 132)"/>
+                    <rect x="275" y="132" width="30" height="4" rx="1" fill="#1a9b8a" opacity="0.6" transform="rotate(-15 290 134)"/>
+                    <rect x="240" y="140" width="30" height="4" rx="1" fill="#0c2340" opacity="0.4" transform="rotate(-15 255 142)"/>
+                    <rect x="275" y="142" width="30" height="4" rx="1" fill="#0c2340" opacity="0.4" transform="rotate(-15 290 144)"/>
+                    <!-- Growth arrow -->
+                    <path d="M50 140 Q100 120 150 105 Q200 85 250 65 Q300 45 340 35" stroke="#e8a838" stroke-width="2.5" fill="none" stroke-dasharray="6 4" opacity="0.6"/>
+                    <polygon points="340,30 350,38 338,40" fill="#e8a838" opacity="0.6"/>
+                </svg>
+            </div>
+
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-lead">Results-driven executive with <strong>25+ years of proven success</strong> in building and scaling commercial operations across energy, technology, and services sectors.</p>
+                    <p class="about-lead"><i class="fas fa-award" style="color: var(--color-accent); margin-right: 8px;"></i>Results-driven executive with <strong>25+ years of proven success</strong> in building and scaling commercial operations across energy, technology, and services sectors.</p>
                     <p>My expertise spans P&L management, strategic business development, and leading cross-functional teams through market entry, transformation, and growth initiatives. My real motivation lies in <strong>renewable energy solutions</strong>.</p>
                     <p>I bring a track record of delivering <strong>30%+ annual revenue growth</strong>, managing international operations, and successfully navigating complex market dynamics — from digital transformations to company liquidations. I'm fluent in Dutch, French, and English with extensive experience across Benelux and European markets.</p>
                     <div class="about-languages">
-                        <h3>Languages</h3>
+                        <h3><i class="fas fa-language" style="margin-right: 6px;"></i>Languages</h3>
                         <div class="language-tags">
-                            <span class="tag">Dutch <em>(Native)</em></span>
-                            <span class="tag">French <em>(Fluent)</em></span>
-                            <span class="tag">English <em>(Fluent)</em></span>
+                            <span class="tag"><i class="fas fa-comment"></i> Dutch <em>(Native)</em></span>
+                            <span class="tag"><i class="fas fa-comment"></i> French <em>(Fluent)</em></span>
+                            <span class="tag"><i class="fas fa-comment"></i> English <em>(Fluent)</em></span>
                         </div>
                     </div>
                 </div>
                 <div class="about-highlights">
                     <div class="highlight-card">
                         <div class="highlight-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <i class="fas fa-check-circle"></i>
                         </div>
                         <h4>Proven Track Record</h4>
                         <p>Consistently delivering revenue growth and operational excellence across multiple industries</p>
                     </div>
                     <div class="highlight-card">
                         <div class="highlight-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            <i class="fas fa-bolt"></i>
                         </div>
                         <h4>Energy Expert</h4>
                         <p>Deep domain knowledge in energy procurement, renewable solutions, and market dynamics</p>
                     </div>
                     <div class="highlight-card">
                         <div class="highlight-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 2a8 8 0 0 1 7.74 6H4.26A8 8 0 0 1 12 4zm0 16a8 8 0 0 1-7.74-6h15.48A8 8 0 0 1 12 20z"/><path d="M2 12h20"/></svg>
+                            <i class="fas fa-globe-europe"></i>
                         </div>
                         <h4>International Reach</h4>
                         <p>Extensive experience managing operations across Benelux and European markets</p>
                     </div>
                     <div class="highlight-card">
                         <div class="highlight-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4m0 14v4M4.22 4.22l2.83 2.83m9.9 9.9l2.83 2.83M1 12h4m14 0h4M4.22 19.78l2.83-2.83m9.9-9.9l2.83-2.83"/></svg>
+                            <i class="fas fa-solar-panel"></i>
                         </div>
                         <h4>Renewable Energy</h4>
                         <p>Passionate about driving the transition to sustainable and renewable energy solutions</p>
@@ -150,51 +202,94 @@
     <section class="section competencies" id="competencies">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Core Expertise</span>
+                <i class="fas fa-cogs"></i>
+                <span class="section-tag"><i class="fas fa-star"></i> Core Expertise</span>
                 <h2 class="section-title">What I Bring to the Table</h2>
             </div>
+
+            <!-- Inline SVG illustration: Strategic/consulting concept -->
+            <div class="section-illustration">
+                <svg viewBox="0 0 400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Central gear/cog -->
+                    <circle cx="200" cy="80" r="35" stroke="#1a9b8a" stroke-width="2" fill="none" opacity="0.3"/>
+                    <circle cx="200" cy="80" r="25" stroke="#0c2340" stroke-width="1.5" fill="none" opacity="0.2"/>
+                    <circle cx="200" cy="80" r="8" fill="#1a9b8a" opacity="0.2"/>
+                    <!-- Gear teeth -->
+                    <rect x="196" y="42" width="8" height="12" rx="2" fill="#1a9b8a" opacity="0.25"/>
+                    <rect x="196" y="106" width="8" height="12" rx="2" fill="#1a9b8a" opacity="0.25"/>
+                    <rect x="162" y="76" width="12" height="8" rx="2" fill="#1a9b8a" opacity="0.25"/>
+                    <rect x="226" y="76" width="12" height="8" rx="2" fill="#1a9b8a" opacity="0.25"/>
+                    <!-- Connection lines to nodes -->
+                    <line x1="165" y1="55" x2="130" y2="35" stroke="#e8a838" stroke-width="1.5" opacity="0.3"/>
+                    <line x1="235" y1="55" x2="270" y2="35" stroke="#e8a838" stroke-width="1.5" opacity="0.3"/>
+                    <line x1="165" y1="105" x2="130" y2="125" stroke="#e8a838" stroke-width="1.5" opacity="0.3"/>
+                    <line x1="235" y1="105" x2="270" y2="125" stroke="#e8a838" stroke-width="1.5" opacity="0.3"/>
+                    <!-- Outer nodes -->
+                    <circle cx="120" cy="30" r="14" fill="#0c2340" opacity="0.1" stroke="#0c2340" stroke-width="1" opacity="0.2"/>
+                    <circle cx="280" cy="30" r="14" fill="#0c2340" opacity="0.1" stroke="#0c2340" stroke-width="1" opacity="0.2"/>
+                    <circle cx="120" cy="130" r="14" fill="#0c2340" opacity="0.1" stroke="#0c2340" stroke-width="1" opacity="0.2"/>
+                    <circle cx="280" cy="130" r="14" fill="#0c2340" opacity="0.1" stroke="#0c2340" stroke-width="1" opacity="0.2"/>
+                    <!-- Bar chart icon inside -->
+                    <rect x="190" y="72" width="5" height="16" rx="1" fill="#1a9b8a" opacity="0.5"/>
+                    <rect x="197" y="66" width="5" height="22" rx="1" fill="#e8a838" opacity="0.5"/>
+                    <rect x="204" y="76" width="5" height="12" rx="1" fill="#0c2340" opacity="0.4"/>
+                    <!-- Side labels -->
+                    <text x="70" y="85" font-size="8" fill="#1a9b8a" opacity="0.5" font-family="Inter, sans-serif">Strategy</text>
+                    <text x="300" y="85" font-size="8" fill="#1a9b8a" opacity="0.5" font-family="Inter, sans-serif">Growth</text>
+                </svg>
+            </div>
+
             <div class="competencies-grid">
                 <div class="competency-card" data-index="1">
+                    <div class="competency-icon"><i class="fas fa-chart-pie"></i></div>
                     <div class="competency-number">01</div>
                     <h3>P&L Management & Financial Oversight</h3>
                     <p>Full responsibility for profit and loss across multiple business units, ensuring financial discipline and sustainable growth.</p>
                 </div>
                 <div class="competency-card" data-index="2">
+                    <div class="competency-icon"><i class="fas fa-globe"></i></div>
                     <div class="competency-number">02</div>
                     <h3>International Business Development</h3>
                     <p>Identifying and capitalizing on market opportunities across European markets, building strategic partnerships and revenue streams.</p>
                 </div>
                 <div class="competency-card" data-index="3">
+                    <div class="competency-icon"><i class="fas fa-chess"></i></div>
                     <div class="competency-number">03</div>
                     <h3>Strategic Planning & Execution</h3>
                     <p>Translating vision into actionable plans with measurable outcomes, driving organizations toward ambitious targets.</p>
                 </div>
                 <div class="competency-card" data-index="4">
+                    <div class="competency-icon"><i class="fas fa-bullhorn"></i></div>
                     <div class="competency-number">04</div>
                     <h3>Sales & Marketing Leadership</h3>
                     <p>Building high-performing sales organizations from the ground up, developing multi-channel go-to-market strategies.</p>
                 </div>
                 <div class="competency-card" data-index="5">
+                    <div class="competency-icon"><i class="fas fa-laptop-code"></i></div>
                     <div class="competency-number">05</div>
                     <h3>Digital Transformation & SaaS</h3>
                     <p>Leading technology-driven business transformation, from SaaS platform development to complete ERP implementations.</p>
                 </div>
                 <div class="competency-card" data-index="6">
+                    <div class="competency-icon"><i class="fas fa-people-group"></i></div>
                     <div class="competency-number">06</div>
                     <h3>Team Building & Talent Development</h3>
                     <p>Recruiting, coaching, and retaining top talent while fostering a culture of performance and continuous improvement.</p>
                 </div>
                 <div class="competency-card" data-index="7">
+                    <div class="competency-icon"><i class="fas fa-arrows-rotate"></i></div>
                     <div class="competency-number">07</div>
                     <h3>Change Management & Restructuring</h3>
                     <p>Successfully navigating complex transitions including company liquidations, market entries, and organizational transformations.</p>
                 </div>
                 <div class="competency-card" data-index="8">
+                    <div class="competency-icon"><i class="fas fa-rocket"></i></div>
                     <div class="competency-number">08</div>
                     <h3>Market Entry & Scaling Operations</h3>
                     <p>Proven ability to evaluate, enter, and scale operations in new markets with sustainable business models.</p>
                 </div>
                 <div class="competency-card" data-index="9">
+                    <div class="competency-icon"><i class="fas fa-handshake"></i></div>
                     <div class="competency-number">09</div>
                     <h3>Stakeholder & Board Relations</h3>
                     <p>Effective communication and alignment with boards, investors, and key stakeholders to drive strategic objectives.</p>
@@ -207,7 +302,8 @@
     <section class="section experience" id="experience">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Career Journey</span>
+                <i class="fas fa-route"></i>
+                <span class="section-tag"><i class="fas fa-briefcase"></i> Career Journey</span>
                 <h2 class="section-title">Professional Experience</h2>
             </div>
 
@@ -218,18 +314,18 @@
                         <div class="timeline-dot current-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <span class="timeline-badge">Current</span>
+                        <span class="timeline-badge"><i class="fas fa-circle" style="font-size:6px;"></i> Current</span>
                         <div class="timeline-roles">
                             <div class="timeline-role">
-                                <h3>General Manager</h3>
+                                <h3><i class="fas fa-building"></i> General Manager</h3>
                                 <h4>Codel — B2B Gas Supplier</h4>
-                                <span class="timeline-date">August 2025 – Present</span>
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> August 2025 – Present</span>
                                 <p>Full P&L responsibility for Belgian B2B gas supplier, reporting to holding company board.</p>
                             </div>
                             <div class="timeline-role">
-                                <h3>Director – Project Manager</h3>
+                                <h3><i class="fas fa-project-diagram"></i> Director – Project Manager</h3>
                                 <h4>Aya Energy</h4>
-                                <span class="timeline-date">July 2025 – Present</span>
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> July 2025 – Present</span>
                                 <p>Leading platform development project for energy procurement consultancy, delivering contract transparency and reporting solutions — supply contracts, PPA, CPPA, flex contracts, and carbon reporting.</p>
                             </div>
                         </div>
@@ -242,9 +338,9 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <h3>Country Director, Netherlands</h3>
+                        <h3><i class="fas fa-compass"></i> Country Director, Netherlands</h3>
                         <h4>Sympower</h4>
-                        <span class="timeline-date">June 2024 – July 2025</span>
+                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> June 2024 – July 2025</span>
                         <p>Directed market entry and commercial strategy for European balance service provider in the Dutch renewable energy market.</p>
                         <ul class="timeline-achievements">
                             <li>Evaluated market potential and developed comprehensive commercial plans</li>
@@ -261,9 +357,9 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <h3>Co-Founder & Managing Director</h3>
+                        <h3><i class="fas fa-lightbulb"></i> Co-Founder & Managing Director</h3>
                         <h4>EnergyMarketPrice.com</h4>
-                        <span class="timeline-date">November 2011 – October 2023</span>
+                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> November 2011 – October 2023</span>
                         <div class="timeline-highlight">
                             <span>12 Years</span> | SaaS Company — From Inception to Profitable Exit
                         </div>
@@ -283,9 +379,9 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <h3>Managing Director (Interim)</h3>
+                        <h3><i class="fas fa-industry"></i> Managing Director (Interim)</h3>
                         <h4>E.ON Belgium / Uniper Belgium</h4>
-                        <span class="timeline-date">October 2014 – August 2020</span>
+                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> October 2014 – August 2020</span>
                         <p>Led commercial operations and full company liquidation for German energy multinational's Belgian B2B entity.</p>
                         <ul class="timeline-achievements">
                             <li>Launched B2B gas offering and transformed sales performance</li>
@@ -302,9 +398,9 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <h3>Head of Mid Market (Director of Sales)</h3>
-                        <h4>EDF Belgium (Électricité de France)</h4>
-                        <span class="timeline-date">January 2005 – July 2008</span>
+                        <h3><i class="fas fa-bolt"></i> Head of Mid Market (Director of Sales)</h3>
+                        <h4>EDF Belgium (Electricite de France)</h4>
+                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> January 2005 – July 2008</span>
                         <p>Built and led sales and marketing operations from ground zero for French energy major's Belgian market entry.</p>
                         <ul class="timeline-achievements">
                             <li>Developed sales and marketing strategy for greenfield market entry</li>
@@ -321,9 +417,9 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <h3>Managing Director</h3>
+                        <h3><i class="fas fa-seedling"></i> Managing Director</h3>
                         <h4>Gate2Growth</h4>
-                        <span class="timeline-date">February 2003 – January 2005</span>
+                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> February 2003 – January 2005</span>
                         <p>Platform connecting entrepreneurs and investors. Managed business analyst team with full P&L responsibility and European Commission project relationships.</p>
                     </div>
                 </div>
@@ -334,10 +430,10 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <h3>Investment Manager</h3>
+                        <h3><i class="fas fa-coins"></i> Investment Manager</h3>
                         <h4>Pythagoras Participations (Venture Capital)</h4>
-                        <span class="timeline-date">June 2000 – November 2002</span>
-                        <p>Managed early-stage technology investments (€50M fund) with board-level portfolio company oversight. Served as board director for multiple companies and led capital raising initiatives.</p>
+                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> June 2000 – November 2002</span>
+                        <p>Managed early-stage technology investments (&#8364;50M fund) with board-level portfolio company oversight. Served as board director for multiple companies and led capital raising initiatives.</p>
                     </div>
                 </div>
 
@@ -347,9 +443,9 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <h3>Regional Account Manager to Sales Manager</h3>
+                        <h3><i class="fas fa-mobile-alt"></i> Regional Account Manager to Sales Manager</h3>
                         <h4>Mobistar (now Orange Belgium)</h4>
-                        <span class="timeline-date">1996 – 2000</span>
+                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> 1996 – 2000</span>
                         <p>Rapid progression from account management to sales leadership during mobile telecom expansion. Defined, built, and managed the exclusive Mobistar Center retail chain from inception.</p>
                     </div>
                 </div>
@@ -361,13 +457,14 @@
     <section class="section education" id="education">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Education</span>
+                <i class="fas fa-graduation-cap"></i>
+                <span class="section-tag"><i class="fas fa-book"></i> Education</span>
                 <h2 class="section-title">Academic Background</h2>
             </div>
             <div class="education-grid">
                 <div class="education-card">
                     <div class="education-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+                        <i class="fas fa-university"></i>
                     </div>
                     <h3>Commercial Engineering</h3>
                     <p class="education-degree">Master's Degree</p>
@@ -376,7 +473,7 @@
                 </div>
                 <div class="education-card">
                     <div class="education-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        <i class="fas fa-chess-king"></i>
                     </div>
                     <h3>Strategic Management Programme</h3>
                     <p class="education-degree">Executive Education</p>
@@ -391,28 +488,29 @@
     <section class="section contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Contact</span>
+                <i class="fas fa-paper-plane"></i>
+                <span class="section-tag"><i class="fas fa-comments"></i> Contact</span>
                 <h2 class="section-title">Let's Start a Conversation</h2>
                 <p class="section-description">Whether you need an experienced energy executive for your next venture, an interim leader, or strategic advice — I'm ready to connect.</p>
             </div>
             <div class="contact-grid">
                 <a href="tel:+32478557176" class="contact-card">
                     <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <i class="fas fa-phone"></i>
                     </div>
                     <h3>Phone</h3>
                     <p>+32 478 557 176</p>
                 </a>
                 <a href="mailto:dirk@dw-office.be" class="contact-card">
                     <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <i class="fas fa-envelope"></i>
                     </div>
                     <h3>Email</h3>
                     <p>dirk@dw-office.be</p>
                 </a>
                 <div class="contact-card">
                     <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <h3>Location</h3>
                     <p>Belgium (Remote/Hybrid)</p>
@@ -425,7 +523,10 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2026 Dirk Wouters. All rights reserved.</p>
+                <div class="footer-logo">
+                    <img src="assets/logo-icon.svg" alt="EMC">
+                </div>
+                <p>&copy; 2026 Dirk Wouters — Energetic Management Consulting. All rights reserved.</p>
             </div>
         </div>
     </footer>
