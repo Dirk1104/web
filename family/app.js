@@ -35,7 +35,7 @@
     const DEFAULT_ADMIN = {
         id: generateId(),
         name: 'Admin',
-        email: 'admin@familiekring.nl',
+        email: 'dirkwouters01@gmail.com',
         password: 'admin123',      // Change on first login!
         role: 'admin',
         status: 'approved',
