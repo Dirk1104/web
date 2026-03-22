@@ -9,6 +9,21 @@
 (function () {
     'use strict';
 
+    // ── EmailJS Configuration ──
+    // Sign up at https://www.emailjs.com (free tier: 200 emails/month)
+    // 1. Create an Email Service (e.g. Gmail) → copy the Service ID
+    // 2. Create an Email Template with variables: {{from_name}}, {{from_email}}, {{message}}
+    // 3. Copy your Public Key from Account → API Keys
+    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';      // Replace with your EmailJS public key
+    const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';      // Replace with your EmailJS service ID
+    const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';    // Replace with your EmailJS template ID
+    const ADMIN_EMAIL = 'admin@familiekring.nl';
+
+    // Initialise EmailJS
+    if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+    }
+
     // ── Storage keys ──
     const KEYS = {
         users: 'fk_users',
@@ -84,6 +99,22 @@
         const hours = d.getHours().toString().padStart(2, '0');
         const mins = d.getMinutes().toString().padStart(2, '0');
         return `${day}-${month}-${year} om ${hours}:${mins}`;
+    }
+
+    function notifyAdmin(userName, userEmail) {
+        if (typeof emailjs === 'undefined' || EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+            console.warn('EmailJS not configured — admin notification skipped.');
+            return;
+        }
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+            to_email: ADMIN_EMAIL,
+            from_name: userName,
+            from_email: userEmail,
+            message: `${userName} (${userEmail}) heeft zich geregistreerd op Familiekring en wacht op goedkeuring.`,
+        }).then(
+            () => console.log('Admin notification sent.'),
+            (err) => console.error('Failed to send admin notification:', err)
+        );
     }
 
     function showToast(message) {
@@ -232,6 +263,7 @@
 
         users.push(newUser);
         saveUsers(users);
+        notifyAdmin(name, email);
         registerForm.reset();
         registerForm.classList.add('hidden');
         pendingMsg.classList.remove('hidden');
