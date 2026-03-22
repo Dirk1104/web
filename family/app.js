@@ -106,14 +106,25 @@
             console.warn('EmailJS not configured — admin notification skipped.');
             return;
         }
-        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        const templateParams = {
+            to_name: 'Admin',
             to_email: ADMIN_EMAIL,
             from_name: userName,
             from_email: userEmail,
+            reply_to: userEmail,
+            subject: 'Nieuwe registratie op Familiekring',
             message: `${userName} (${userEmail}) heeft zich geregistreerd op Familiekring en wacht op goedkeuring.`,
-        }).then(
-            () => console.log('Admin notification sent.'),
-            (err) => console.error('Failed to send admin notification:', err)
+        };
+        console.log('Sending EmailJS notification with params:', templateParams);
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams).then(
+            (response) => {
+                console.log('Admin notification sent successfully:', response.status, response.text);
+                showToast('Registratie gelukt! De beheerder is op de hoogte gebracht.');
+            },
+            (err) => {
+                console.error('Failed to send admin notification:', JSON.stringify(err));
+                showToast('Registratie gelukt, maar de melding kon niet worden verstuurd.');
+            }
         );
     }
 
