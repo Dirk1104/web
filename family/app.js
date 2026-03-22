@@ -14,9 +14,9 @@
     // 1. Create an Email Service (e.g. Gmail) → copy the Service ID
     // 2. Create an Email Template with variables: {{from_name}}, {{from_email}}, {{message}}
     // 3. Copy your Public Key from Account → API Keys
-    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';      // Replace with your EmailJS public key
-    const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';      // Replace with your EmailJS service ID
-    const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';    // Replace with your EmailJS template ID
+    const EMAILJS_PUBLIC_KEY = 'gorJ-Hh0nt6scHYyf';
+    const EMAILJS_SERVICE_ID = 'service_nbnzlnk';
+    const EMAILJS_TEMPLATE_ID = 'template_lvvf9mj';
     const ADMIN_EMAIL = 'admin@familiekring.nl';
 
     // Initialise EmailJS
