@@ -252,12 +252,15 @@
     // Register
     registerForm.addEventListener('submit', (e) => {
         e.preventDefault();
+        console.log('Register form submitted');
         const name = $('#reg-name').value.trim();
         const email = $('#reg-email').value.trim().toLowerCase();
         const password = $('#reg-password').value;
+        console.log('Registration attempt for:', name, email);
 
         const users = getUsers();
         if (users.find(u => u.email === email)) {
+            console.log('Email already exists:', email);
             showToast('Er bestaat al een account met dit e-mailadres');
             return;
         }
@@ -274,6 +277,8 @@
 
         users.push(newUser);
         saveUsers(users);
+        console.log('User saved, calling notifyAdmin...');
+        console.log('emailjs available:', typeof emailjs !== 'undefined');
         notifyAdmin(name, email);
         registerForm.reset();
         registerForm.classList.add('hidden');
