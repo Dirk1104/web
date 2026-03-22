@@ -17,7 +17,7 @@
     const EMAILJS_PUBLIC_KEY = 'gorJ-Hh0nt6scHYyf';
     const EMAILJS_SERVICE_ID = 'service_nbnzlnk';
     const EMAILJS_TEMPLATE_ID = 'template_lvvf9mj';
-    const ADMIN_EMAIL = 'admin@familiekring.nl';
+    const ADMIN_EMAIL = 'dirkwouters01@gmail.com';
 
     // Initialise EmailJS
     if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
