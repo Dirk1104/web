@@ -41,7 +41,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 120px;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -171,134 +171,6 @@ ul { list-style: none; }
     transition: var(--transition);
 }
 
-/* --- Hero Card Market Prices --- */
-.hero-card-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 20px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.hero-card-header > i {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.4);
-}
-
-.hero-card-title {
-    font-family: var(--font-heading);
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: rgba(255,255,255,0.7);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-}
-
-.hero-card-date {
-    margin-left: auto;
-    font-size: 0.68rem;
-    color: rgba(255,255,255,0.3);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.hero-card-date i {
-    font-size: 0.65rem;
-}
-
-.hero-card-group {
-    margin-bottom: 16px;
-}
-
-.hero-card-group:last-of-type {
-    margin-bottom: 0;
-}
-
-.hero-card-group-title {
-    font-size: 0.68rem;
-    font-weight: 600;
-    color: rgba(255,255,255,0.4);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.hero-card-group-title i {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.5);
-}
-
-.hero-card-prices {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-}
-
-.hero-price-item {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    padding: 12px 14px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: var(--radius-sm);
-    transition: all 0.3s ease;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.hero-price-item:hover {
-    background: rgba(255,255,255,0.12);
-    border-color: rgba(255,255,255,0.15);
-    transform: translateY(-2px);
-}
-
-.hero-price-label {
-    font-size: 0.62rem;
-    font-weight: 500;
-    color: rgba(255,255,255,0.4);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-}
-
-.hero-price-label em {
-    font-style: normal;
-    color: rgba(255,255,255,0.25);
-}
-
-.hero-price-value {
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.2;
-}
-
-.hero-price-value small {
-    font-size: 0.55rem;
-    font-weight: 500;
-    color: rgba(255,255,255,0.3);
-    margin-left: 3px;
-}
-
-.hero-price-source {
-    font-size: 0.58rem;
-    color: rgba(255,255,255,0.2);
-}
-
-.hero-card-disclaimer {
-    text-align: center;
-    font-size: 0.6rem;
-    color: rgba(255,255,255,0.18);
-    margin-top: 14px;
-    font-style: italic;
-}
-
 /* --- Hero --- */
 .hero {
     position: relative;
@@ -306,7 +178,7 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding-top: 112px;
+    padding-top: 72px;
 }
 
 .hero-bg {
@@ -359,10 +231,7 @@ ul { list-style: none; }
 .hero-content {
     position: relative;
     z-index: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+    max-width: 720px;
     padding: 80px 24px;
 }
 
@@ -489,23 +358,6 @@ ul { list-style: none; }
     transform: translateY(-2px);
 }
 
-.hero-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-card {
-    background: linear-gradient(145deg, #5c1a2a 0%, #451420 100%);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: var(--radius-lg);
-    padding: 44px;
-    width: 100%;
-    max-width: 420px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-}
-
 
 .scroll-indicator {
     position: absolute;
@@ -594,156 +446,6 @@ ul { list-style: none; }
     color: var(--color-text-secondary);
     font-size: 1.1rem;
     line-height: 1.7;
-}
-
-/* --- News Ticker Carousel --- */
-.news-ticker {
-    position: fixed;
-    top: 72px;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    background: #0a0a0a;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    display: flex;
-    align-items: center;
-    height: 40px;
-    overflow: hidden;
-}
-
-.news-ticker-label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0 16px;
-    background: var(--color-teal);
-    height: 100%;
-    white-space: nowrap;
-    flex-shrink: 0;
-}
-
-.news-ticker-label i {
-    font-size: 0.7rem;
-    color: rgba(255,255,255,0.8);
-}
-
-.news-ticker-label span {
-    font-size: 0.68rem;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.news-ticker-date {
-    color: rgba(255,255,255,0.5) !important;
-    font-weight: 500 !important;
-    margin-left: 4px;
-}
-
-.news-ticker-track {
-    flex: 1;
-    overflow: hidden;
-    padding: 0 16px;
-    position: relative;
-}
-
-.news-ticker-slides {
-    position: relative;
-    height: 40px;
-}
-
-.news-ticker-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.news-ticker-slide.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.news-ticker-slide.exit-up {
-    opacity: 0;
-    transform: translateY(-100%);
-}
-
-.news-ticker-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 0.6rem;
-    font-weight: 700;
-    color: rgba(255,255,255,0.6);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    padding: 3px 8px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 50px;
-    white-space: nowrap;
-    flex-shrink: 0;
-}
-
-.news-ticker-tag i {
-    font-size: 0.55rem;
-    color: var(--color-teal-light);
-}
-
-.news-ticker-headline {
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.7);
-    line-height: 1.3;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.news-ticker-nav {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    padding: 0 8px;
-    flex-shrink: 0;
-}
-
-.news-ticker-btn {
-    background: none;
-    border: none;
-    color: rgba(255,255,255,0.3);
-    cursor: pointer;
-    padding: 4px 6px;
-    font-size: 0.65rem;
-    transition: color 0.2s ease;
-    line-height: 1;
-}
-
-.news-ticker-btn:hover {
-    color: rgba(255,255,255,0.8);
-}
-
-.news-ticker-source {
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    color: rgba(255,255,255,0.2);
-    font-size: 0.65rem;
-    transition: color 0.2s ease;
-    flex-shrink: 0;
-    height: 100%;
-    border-left: 1px solid rgba(255,255,255,0.06);
-}
-
-.news-ticker-source:hover {
-    color: rgba(255,255,255,0.6);
 }
 
 /* --- Experience Cards --- */
@@ -1899,24 +1601,6 @@ ul { list-style: none; }
 
 /* --- Responsive --- */
 @media (max-width: 1024px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 60px 24px;
-    }
-
-    .hero-stats {
-        justify-content: center;
-    }
-
-    .hero-actions {
-        justify-content: center;
-    }
-
-    .hero-visual {
-        display: none;
-    }
-
     .about-content {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -1932,18 +1616,6 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
-    .news-ticker-label span:not(.news-ticker-date) {
-        display: none;
-    }
-
-    .news-ticker-date {
-        margin-left: 0 !important;
-    }
-
-    .news-ticker-headline {
-        font-size: 0.72rem;
-    }
-
     .exp-grid {
         grid-template-columns: 1fr;
     }
