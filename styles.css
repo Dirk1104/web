@@ -288,6 +288,11 @@ ul { list-style: none; }
     flex-direction: column;
 }
 
+.stat-value {
+    display: flex;
+    align-items: baseline;
+}
+
 .stat-number {
     font-family: var(--font-heading);
     font-size: 2.4rem;
