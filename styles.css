@@ -96,13 +96,9 @@ ul { list-style: none; }
     flex-shrink: 0;
 }
 
-.nav-logo-text {
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--color-accent);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+.nav-logo img {
+    height: 52px;
+    width: auto;
 }
 
 .nav-menu {
