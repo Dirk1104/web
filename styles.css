@@ -1,7 +1,7 @@
 /* ============================================
    ENERGETIC MANAGEMENT CONSULTING — Website Styles
-   Professional black & white palette
-   Logo accent colors used sparingly
+   Emerald + Gold executive palette
+   Energy transition themed: sustainability meets premium
    ============================================ */
 
 /* --- Reset & Base --- */
@@ -12,22 +12,22 @@
 }
 
 :root {
-    --color-primary: #111111;
-    --color-primary-light: #2a2a2a;
-    --color-primary-dark: #000000;
-    --color-teal: #5c1a2a;
-    --color-teal-light: #7a2840;
-    --color-teal-dark: #451420;
-    --color-accent: #e8a838;
-    --color-accent-light: #f0c060;
-    --color-accent-dark: #d4952b;
-    --color-bg: #ffffff;
-    --color-bg-alt: #f5f5f5;
+    --color-primary: #1a3c34;
+    --color-primary-light: #245046;
+    --color-primary-dark: #0f2a24;
+    --color-teal: #2d6a5a;
+    --color-teal-light: #3a8572;
+    --color-teal-dark: #1e4f43;
+    --color-accent: #d4a332;
+    --color-accent-light: #e4bb55;
+    --color-accent-dark: #b8892a;
+    --color-bg: #fafaf8;
+    --color-bg-alt: #f2f0eb;
     --color-surface: #ffffff;
-    --color-text: #111111;
-    --color-text-secondary: #444444;
-    --color-text-light: #777777;
-    --color-border: #e0e0e0;
+    --color-text: #1a2e28;
+    --color-text-secondary: #3d5a50;
+    --color-text-light: #6b8a7e;
+    --color-border: #d8d4cc;
     --font-heading: 'Raleway', 'Calibri Light', Calibri, 'Segoe UI', sans-serif;
     --font-body: 'Raleway', 'Calibri Light', Calibri, 'Segoe UI', sans-serif;
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
@@ -190,7 +190,7 @@ ul { list-style: none; }
 .hero-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #111111 0%, #1a1a1a 40%, #0a0a0a 100%);
+    background: linear-gradient(135deg, #1a3c34 0%, #0f2a24 40%, #162e28 100%);
 }
 
 .hero-pattern {
@@ -212,7 +212,7 @@ ul { list-style: none; }
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(212, 163, 50, 0.06) 0%, transparent 70%);
     z-index: 1;
 }
 
@@ -224,7 +224,7 @@ ul { list-style: none; }
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(45, 106, 90, 0.08) 0%, transparent 70%);
     z-index: 1;
 }
 
@@ -238,7 +238,7 @@ ul { list-style: none; }
 .hero-greeting {
     font-size: 0.85rem;
     font-weight: 600;
-    color: rgba(255,255,255,0.5);
+    color: var(--color-accent);
     letter-spacing: 0.14em;
     text-transform: uppercase;
     margin-bottom: 16px;
@@ -305,13 +305,13 @@ ul { list-style: none; }
     font-family: var(--font-heading);
     font-size: 2.4rem;
     font-weight: 700;
-    color: rgba(255,255,255,0.5);
+    color: var(--color-accent);
     line-height: 1;
 }
 
 .stat-label {
     font-size: 0.8rem;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.65);
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin-top: 4px;
@@ -341,14 +341,14 @@ ul { list-style: none; }
 }
 
 .btn-primary {
-    background: #ffffff;
-    color: #111111;
+    background: var(--color-accent);
+    color: var(--color-primary-dark);
 }
 
 .btn-primary:hover {
-    background: #f0f0f0;
+    background: var(--color-accent-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 24px rgba(212, 163, 50, 0.3);
 }
 
 .btn-outline {
@@ -1156,9 +1156,9 @@ ul { list-style: none; }
 
 /* --- Footer --- */
 .footer {
-    background: #111111;
+    background: var(--color-primary-dark);
     padding: 40px 0;
-    border-top: 3px solid var(--color-teal);
+    border-top: 3px solid var(--color-accent);
 }
 
 .footer-content {
