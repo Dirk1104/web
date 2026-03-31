@@ -98,11 +98,12 @@ ul { list-style: none; }
 }
 
 .nav-logo img {
-    height: 44px;
+    height: 52px;
     width: auto;
 }
 
 .nav-logo-text {
+    display: none;
     font-family: var(--font-body);
     font-size: 0.75rem;
     font-weight: 700;
@@ -1174,9 +1175,8 @@ ul { list-style: none; }
 }
 
 .footer-logo img {
-    height: 32px;
+    height: 40px;
     width: auto;
-    filter: brightness(0) invert(1) opacity(0.6);
 }
 
 .footer-content p {
