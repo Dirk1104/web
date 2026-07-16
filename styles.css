@@ -734,11 +734,12 @@ ul { list-style: none; }
 
 .competencies-closing {
     text-align: center;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.05rem;
+    font-weight: 500;
     color: var(--color-text-secondary);
-    margin-top: 48px;
-    font-style: italic;
+    margin: 48px auto 0;
+    max-width: 760px;
+    line-height: 1.7;
 }
 
 /* --- Experience Timeline --- */
