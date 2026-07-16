@@ -120,10 +120,6 @@ ul { list-style: none; }
     gap: 6px;
 }
 
-.nav-link i {
-    font-size: 0.85rem;
-}
-
 .nav-link:hover {
     color: var(--color-primary);
     background: rgba(0, 0, 0, 0.04);
@@ -234,12 +230,6 @@ ul { list-style: none; }
     margin-bottom: 16px;
 }
 
-.hero-logo {
-    max-width: 105px;
-    height: auto;
-    margin-bottom: 24px;
-}
-
 .hero-name {
     font-family: var(--font-heading);
     font-size: clamp(2.2rem, 4vw, 3.2rem);
@@ -332,10 +322,6 @@ ul { list-style: none; }
     border: none;
 }
 
-.btn i {
-    font-size: 0.9rem;
-}
-
 .btn-primary {
     background: var(--color-accent);
     color: var(--color-primary-dark);
@@ -404,18 +390,9 @@ ul { list-style: none; }
     margin-bottom: 72px;
 }
 
-.section-header i {
-    display: block;
-    font-size: 2.2rem;
-    color: var(--color-text-light);
-    margin-bottom: 14px;
-    opacity: 0.6;
-}
-
 .section-tag {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
     font-size: 0.78rem;
     font-weight: 600;
     color: var(--color-text-secondary);
@@ -426,10 +403,6 @@ ul { list-style: none; }
     border-radius: 50px;
     margin-bottom: 20px;
     border: 1px solid var(--color-border);
-}
-
-.section-tag i {
-    font-size: 0.8rem;
 }
 
 .section-title {
@@ -523,18 +496,6 @@ ul { list-style: none; }
     line-height: 1.6;
 }
 
-/* --- Section Illustrations --- */
-.section-illustration {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.section-illustration svg {
-    max-width: 280px;
-    height: auto;
-    margin: 0 auto;
-}
-
 /* --- About --- */
 .about {
     background: var(--color-surface);
@@ -591,11 +552,6 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     gap: 6px;
-}
-
-.tag i {
-    color: var(--color-text-light);
-    font-size: 0.85rem;
 }
 
 .tag em {
@@ -778,11 +734,12 @@ ul { list-style: none; }
 
 .competencies-closing {
     text-align: center;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.05rem;
+    font-weight: 500;
     color: var(--color-text-secondary);
-    margin-top: 48px;
-    font-style: italic;
+    margin: 48px auto 0;
+    max-width: 760px;
+    line-height: 1.7;
 }
 
 /* --- Experience Timeline --- */
@@ -1290,10 +1247,6 @@ ul { list-style: none; }
         flex-direction: column;
         gap: 12px;
     }
-
-    .section-illustration svg {
-        max-width: 200px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1307,9 +1260,5 @@ ul { list-style: none; }
 
     .competency-card {
         padding: 24px;
-    }
-
-    .nav-logo-text {
-        display: none;
     }
 }
