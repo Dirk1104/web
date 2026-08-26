@@ -12,22 +12,22 @@
 }
 
 :root {
-    --color-primary: #1a3c34;
-    --color-primary-light: #245046;
-    --color-primary-dark: #0f2a24;
-    --color-teal: #2d6a5a;
-    --color-teal-light: #3a8572;
-    --color-teal-dark: #1e4f43;
-    --color-accent: #d4a332;
-    --color-accent-light: #e4bb55;
-    --color-accent-dark: #b8892a;
-    --color-bg: #fafaf8;
-    --color-bg-alt: #f2f0eb;
+    --color-primary: #14294b;
+    --color-primary-light: #1d3a66;
+    --color-primary-dark: #0b1a33;
+    --color-teal: #23538f;
+    --color-teal-light: #2f6ab3;
+    --color-teal-dark: #16386b;
+    --color-accent: #7CFC00;
+    --color-accent-light: #98ff3d;
+    --color-accent-dark: #5fc400;
+    --color-bg: #fafbfd;
+    --color-bg-alt: #f0f3f8;
     --color-surface: #ffffff;
-    --color-text: #1a2e28;
-    --color-text-secondary: #3d5a50;
-    --color-text-light: #6b8a7e;
-    --color-border: #d8d4cc;
+    --color-text: #14213a;
+    --color-text-secondary: #3c4a63;
+    --color-text-light: #6b7a94;
+    --color-border: #d8dee8;
     --font-heading: 'Raleway', 'Calibri Light', Calibri, 'Segoe UI', sans-serif;
     --font-body: 'Raleway', 'Calibri Light', Calibri, 'Segoe UI', sans-serif;
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
@@ -176,7 +176,7 @@ ul { list-style: none; }
 .hero-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #1e8560 0%, #166a4a 45%, #279268 100%);
+    background: linear-gradient(135deg, #14294b 0%, #0b1a33 45%, #1c3a68 100%);
 }
 
 .hero-pattern {
@@ -198,7 +198,7 @@ ul { list-style: none; }
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(212, 163, 50, 0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(124, 252, 0, 0.07) 0%, transparent 70%);
     z-index: 1;
 }
 
@@ -210,7 +210,7 @@ ul { list-style: none; }
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(45, 106, 90, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(47, 106, 179, 0.12) 0%, transparent 70%);
     z-index: 1;
 }
 
@@ -330,7 +330,7 @@ ul { list-style: none; }
 .btn-primary:hover {
     background: var(--color-accent-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(212, 163, 50, 0.3);
+    box-shadow: 0 8px 24px rgba(124, 252, 0, 0.3);
 }
 
 .btn-outline {
@@ -1058,7 +1058,7 @@ ul { list-style: none; }
     transform: translateY(-6px);
     box-shadow: 0 16px 48px rgba(0,0,0,0.1);
     border-color: transparent;
-    background: #1e8560;
+    background: var(--color-primary);
 }
 
 .contact-card:hover h3,
