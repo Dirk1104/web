@@ -18,9 +18,9 @@
     --color-teal: #23538f;
     --color-teal-light: #2f6ab3;
     --color-teal-dark: #16386b;
-    --color-accent: #7CFC00;
-    --color-accent-light: #98ff3d;
-    --color-accent-dark: #5fc400;
+    --color-accent: #4CAF50;
+    --color-accent-light: #66bb6a;
+    --color-accent-dark: #388e3c;
     --color-bg: #fafbfd;
     --color-bg-alt: #f0f3f8;
     --color-surface: #ffffff;
@@ -198,7 +198,7 @@ ul { list-style: none; }
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(124, 252, 0, 0.07) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, transparent 70%);
     z-index: 1;
 }
 
@@ -330,7 +330,7 @@ ul { list-style: none; }
 .btn-primary:hover {
     background: var(--color-accent-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(124, 252, 0, 0.3);
+    box-shadow: 0 8px 24px rgba(76, 175, 80, 0.3);
 }
 
 .btn-outline {
