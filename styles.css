@@ -176,7 +176,7 @@ ul { list-style: none; }
 .hero-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #1a3c34 0%, #0f2a24 40%, #162e28 100%);
+    background: linear-gradient(135deg, #1e8560 0%, #166a4a 45%, #279268 100%);
 }
 
 .hero-pattern {
@@ -1058,7 +1058,7 @@ ul { list-style: none; }
     transform: translateY(-6px);
     box-shadow: 0 16px 48px rgba(0,0,0,0.1);
     border-color: transparent;
-    background: var(--color-primary);
+    background: #1e8560;
 }
 
 .contact-card:hover h3,
