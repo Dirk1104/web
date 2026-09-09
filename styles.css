@@ -219,6 +219,9 @@ ul { list-style: none; }
     z-index: 2;
     max-width: 1060px;
     padding: 80px 24px;
+}
+
+.hero-body {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 64px;
@@ -1205,7 +1208,7 @@ ul { list-style: none; }
         padding: 72px 0;
     }
 
-    .hero-content {
+    .hero-body {
         grid-template-columns: 1fr;
         gap: 32px;
         justify-items: center;
