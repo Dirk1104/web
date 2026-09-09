@@ -221,6 +221,16 @@ ul { list-style: none; }
     padding: 80px 24px;
 }
 
+.hero-portrait {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-accent);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    margin-bottom: 28px;
+}
+
 .hero-greeting {
     font-size: 0.85rem;
     font-weight: 600;
