@@ -217,27 +217,22 @@ ul { list-style: none; }
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 720px;
+    max-width: 1060px;
     padding: 80px 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 64px;
+    align-items: start;
 }
 
 .hero-portrait {
-    width: 150px;
-    height: 150px;
+    width: 210px;
+    height: 210px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--color-accent);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
-    margin-bottom: 28px;
-}
-
-.hero-greeting {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--color-accent);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-top: 4px;
 }
 
 .hero-name {
@@ -1208,6 +1203,19 @@ ul { list-style: none; }
 
     .section {
         padding: 72px 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .hero-portrait {
+        order: -1;
+        width: 150px;
+        height: 150px;
     }
 
     .hero-stats {
