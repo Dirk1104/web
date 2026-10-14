@@ -50,8 +50,13 @@ jobs:
           enc() { python3 -c 'import sys; print(sys.stdin.read().replace("%","%25").replace("\r","").replace("\n","%0A"))'; }
           listing=$(lftp --env-password -u "$FTP_USERNAME" "$FTP_SERVER" -e "set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate no; echo '== login folder:'; pwd; echo '== contents:'; cls -1F; echo '== public_html contents:'; cls -1F public_html/; bye" 2>&1 | head -80)
           echo "::notice title=FTP listing::$(printf '%s' "$listing" | enc)"
-          for u in "http://185.182.57.21/~dirkwouters/" "http://185.182.57.21/~dirkwouters/index.html" "http://185.182.57.21/~dirkwouters/styles.css"; do
-            code=$(curl -s -m 20 -o /tmp/body -w '%{http_code}' "$u")
-            snippet=$(head -c 400 /tmp/body | tr -d '\r')
-            echo "::notice title=Live check $code::$u%0A$(printf '%s' "$snippet" | enc)"
+          domains=$(lftp --env-password -u "$FTP_USERNAME" "$FTP_SERVER" -e "set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate no; cls -1 domains/; bye" 2>/dev/null | sed 's#^domains/##; s#/$##')
+          i=0
+          for d in $domains; do
+            i=$((i+1))
+            for h in "$d" "www.$d"; do
+              code=$(curl -s -m 20 -o /tmp/body -H "Host: $h" -w '%{http_code}' "http://$FTP_SERVER/")
+              found=no; grep -q "Strategic business architect" /tmp/body && found=yes
+              echo "::notice title=Domain $i check ($h) HTTP $code, site found: $found::ok"
+            done
           done
