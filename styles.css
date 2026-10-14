@@ -941,6 +941,41 @@ ul { list-style: none; }
 }
 
 /* --- Education --- */
+.podcast {
+    background: var(--color-primary);
+}
+
+.podcast .section-tag {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: var(--color-accent);
+}
+
+.podcast .section-title {
+    color: #fff;
+}
+
+.podcast .section-description {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.podcast-player {
+    max-width: 760px;
+    margin: 0 auto;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+.podcast-player iframe {
+    display: block;
+}
+
+.podcast-link {
+    text-align: center;
+    margin-top: 32px;
+}
+
 .education {
     background: var(--color-bg-alt);
 }
