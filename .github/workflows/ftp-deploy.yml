@@ -16,6 +16,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Normalize server directory
+        id: dir
+        run: |
+          d="${{ secrets.FTP_SERVER_DIR }}"
+          if [ -z "$d" ]; then d="./"; fi
+          case "$d" in */) ;; *) d="$d/";; esac
+          echo "dir=$d" >> "$GITHUB_OUTPUT"
+
       - name: Sync files to web host
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -23,7 +31,8 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
-          server-dir: ${{ secrets.FTP_SERVER_DIR || './' }}
+          security: loose
+          server-dir: ${{ steps.dir.outputs.dir }}
           exclude: |
             **/.git*
             **/.git*/**
