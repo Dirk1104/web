@@ -40,3 +40,21 @@ jobs:
             ./ "$dir"
           bye
           EOF
+
+      - name: Diagnostics (folder listing and live check)
+        if: always()
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          LFTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_SERVER_DIR: ${{ secrets.FTP_SERVER_DIR }}
+        run: |
+          enc() { python3 -c 'import sys; print(sys.stdin.read().replace("%","%25").replace("\r","").replace("\n","%0A"))'; }
+          echo "::notice title=Configured folder::FTP_SERVER_DIR is '${FTP_SERVER_DIR}'"
+          listing=$(lftp --env-password -u "$FTP_USERNAME" "$FTP_SERVER" -e "set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate no; echo '== login folder:'; pwd; echo '== contents:'; cls -1F; echo '== target folder contents:'; cls -1F ${FTP_SERVER_DIR:-./}; bye" 2>&1 | head -80)
+          echo "::notice title=FTP listing::$(printf '%s' "$listing" | enc)"
+          for u in "http://185.182.57.21/~dirkwouters/" "http://185.182.57.21/~dirkwouters/index.html" "http://185.182.57.21/~dirkwouters/styles.css"; do
+            code=$(curl -s -m 20 -o /tmp/body -w '%{http_code}' "$u")
+            snippet=$(head -c 400 /tmp/body | tr -d '\r')
+            echo "::notice title=Live check $code::$u%0A$(printf '%s' "$snippet" | enc)"
+          done
