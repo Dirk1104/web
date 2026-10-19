@@ -1179,6 +1179,26 @@ ul { list-style: none; }
     color: rgba(255,255,255,0.5);
 }
 
+/* --- Justified body text --- */
+.hero-subtitle,
+.hero-lead,
+.about-text p,
+.highlight-card p,
+.competency-card p,
+.exp-card-summary {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+.section-description,
+.competencies-closing {
+    text-align: justify;
+    text-align-last: center;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
 /* --- Animations --- */
 .fade-in {
     opacity: 0;
