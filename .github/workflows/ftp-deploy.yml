@@ -56,7 +56,7 @@ jobs:
             i=$((i+1))
             for h in "$d" "www.$d"; do
               code=$(curl -s -m 20 -o /tmp/body -H "Host: $h" -w '%{http_code}' "http://$FTP_SERVER/")
-              found=no; grep -q "Strategic business architect" /tmp/body && found=yes
+              found=no; grep -qi "Strategic business architect" /tmp/body && found=yes
               echo "::notice title=Domain $i check ($h) HTTP $code, site found: $found::ok"
             done
           done
