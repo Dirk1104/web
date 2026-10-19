@@ -1185,6 +1185,7 @@ ul { list-style: none; }
 .about-text p,
 .highlight-card p,
 .competency-card p,
+.exp-card-role,
 .exp-card-summary {
     text-align: justify;
     hyphens: auto;
@@ -1194,7 +1195,6 @@ ul { list-style: none; }
 .section-description,
 .competencies-closing {
     text-align: justify;
-    text-align-last: center;
     hyphens: auto;
     -webkit-hyphens: auto;
 }

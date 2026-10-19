@@ -19,6 +19,12 @@ jobs:
       - name: Install lftp
         run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
 
+      - name: Stamp asset versions so browsers fetch fresh CSS/JS
+        run: |
+          v="${GITHUB_SHA::7}"
+          sed -i "s#href=\"styles.css\"#href=\"styles.css?v=$v\"#; s#src=\"script.js\"#src=\"script.js?v=$v\"#" index.html
+          grep -n "styles.css?v=\|script.js?v=" index.html
+
       - name: Upload site over FTPS
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
@@ -57,6 +63,8 @@ jobs:
             for h in "$d" "www.$d"; do
               code=$(curl -s -m 20 -o /tmp/body -H "Host: $h" -w '%{http_code}' "http://$FTP_SERVER/")
               found=no; grep -qi "Strategic business architect" /tmp/body && found=yes
-              echo "::notice title=Domain $i check ($h) HTTP $code, site found: $found::ok"
+              echo "::notice title=Domain $i check ($h) HTTP $code - site found $found::ok"
+              css=$(curl -s -m 20 -H "Host: $h" "http://$FTP_SERVER/styles.css" | grep -c "text-align: justify")
+              echo "::notice title=Domain $i css ($h) justify rules $css::ok"
             done
           done
