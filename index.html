@@ -324,11 +324,20 @@
                 <div class="footer-logo">
                     <img src="assets/emc_logo_v4_transparent.png" alt="EMC">
                 </div>
-                <p>&copy; 2026 Dirk Wouters — Energetic Management Consulting. All rights reserved.</p>
+                <p>&copy; 2026 Dirk Wouters — Energetic Management Consulting. All rights reserved. <button type="button" class="cookie-settings-link" id="cookieSettings">Cookie settings</button></p>
             </div>
         </div>
     </footer>
 
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <p>This site uses Google Analytics cookies to count visitors anonymously. Do you accept?</p>
+        <div class="cookie-actions">
+            <button type="button" class="cookie-btn cookie-btn--decline" id="cookieDecline">Decline</button>
+            <button type="button" class="cookie-btn cookie-btn--accept" id="cookieAccept">Accept</button>
+        </div>
+    </div>
+
+    <script src="analytics.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
