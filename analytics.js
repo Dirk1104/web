@@ -1,5 +1,5 @@
 (function () {
-    var GA_ID = 'G-XXXXXXXXXX';
+    var GA_ID = 'G-2LZZQCK9W9';
     var KEY = 'cookieConsent';
 
     function read() {
