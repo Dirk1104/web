@@ -278,8 +278,15 @@ ul { list-style: none; }
 .hero-lead strong {
     font-weight: 700;
     color: #fff;
+    font-size: 0.9rem;
     hyphens: manual;
     -webkit-hyphens: manual;
+}
+
+@media (min-width: 1024px) {
+    .hero-lead strong {
+        white-space: nowrap;
+    }
 }
 
 .hero-stats {
