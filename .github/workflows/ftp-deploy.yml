@@ -38,7 +38,7 @@ jobs:
           set ssl:verify-certificate no
           set ftp:passive-mode true
           set net:timeout 30
-          set net:max-retries 3
+          set net:max-retries 2
           set net:reconnect-interval-base 5
           mirror --reverse --verbose --parallel=2 \
             --exclude-glob .git* --exclude .git/ --exclude .github/ --exclude family/ \
@@ -46,25 +46,11 @@ jobs:
           bye
           EOF
 
-      - name: Diagnostics (folder listing and live check)
+      - name: Live check
         if: always()
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          LFTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: |
-          enc() { python3 -c 'import sys; print(sys.stdin.read().replace("%","%25").replace("\r","").replace("\n","%0A"))'; }
-          listing=$(lftp --env-password -u "$FTP_USERNAME" "$FTP_SERVER" -e "set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate no; echo '== login folder:'; pwd; echo '== contents:'; cls -1F; echo '== public_html contents:'; cls -1F public_html/; bye" 2>&1 | head -80)
-          echo "::notice title=FTP listing::$(printf '%s' "$listing" | enc)"
-          domains=$(lftp --env-password -u "$FTP_USERNAME" "$FTP_SERVER" -e "set ftp:ssl-force true; set ftp:ssl-protect-data true; set ssl:verify-certificate no; cls -1 domains/; bye" 2>/dev/null | sed 's#^domains/##; s#/$##')
-          i=0
-          for d in $domains; do
-            i=$((i+1))
-            for h in "$d" "www.$d"; do
-              code=$(curl -s -m 20 -o /tmp/body -H "Host: $h" -w '%{http_code}' "http://$FTP_SERVER/")
-              found=no; grep -qi "Connecting strategy, organisation and execution" /tmp/body && found=yes
-              echo "::notice title=Domain $i check ($h) HTTP $code - site found $found::ok"
-              css=$(curl -s -m 20 -H "Host: $h" "http://$FTP_SERVER/styles.css" | grep -c "text-align: justify")
-              echo "::notice title=Domain $i css ($h) justify rules $css::ok"
-            done
+          for h in dirkwouters.com www.dirkwouters.com; do
+            code=$(curl -s -m 20 -o /tmp/body -w '%{http_code}' "http://$h/")
+            found=no; grep -qi "Connecting strategy, organisation and execution" /tmp/body && found=yes
+            echo "::notice title=Live check ($h) HTTP $code - site found $found::ok"
           done
