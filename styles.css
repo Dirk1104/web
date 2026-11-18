@@ -275,6 +275,13 @@ ul { list-style: none; }
     margin-top: -20px;
 }
 
+.hero-lead strong {
+    font-weight: 700;
+    color: #fff;
+    hyphens: manual;
+    -webkit-hyphens: manual;
+}
+
 .hero-stats {
     display: flex;
     gap: 40px;
