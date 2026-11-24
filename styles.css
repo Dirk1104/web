@@ -283,10 +283,8 @@ ul { list-style: none; }
     -webkit-hyphens: manual;
 }
 
-@media (min-width: 1024px) {
-    .hero-lead strong {
-        white-space: nowrap;
-    }
+.nowrap {
+    white-space: nowrap;
 }
 
 .hero-stats {
