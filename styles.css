@@ -1093,6 +1093,11 @@ ul { list-style: none; }
     background: var(--color-surface);
 }
 
+.contact-booking {
+    text-align: center;
+    margin-top: 40px;
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
