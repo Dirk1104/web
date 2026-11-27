@@ -1,0 +1,21 @@
+name: Live page peek
+
+on:
+  push:
+    branches: [claude/cv-web-dirk-86dbd]
+    paths: [.github/workflows/live-peek.yml]
+
+jobs:
+  peek:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch live pages
+        run: |
+          for u in http://dirkwouters.com/ https://dirkwouters.com/ https://www.dirkwouters.com/; do
+            code=$(curl -s -L -m 20 -o body.html -w '%{http_code} %{url_effective} %{size_download}B' "$u")
+            title=$(grep -o '<title>[^<]*' body.html | head -1)
+            h1=$(grep -o 'hero-name">[^<]*' body.html | head -1)
+            stat=$(grep -o 'stat-number[^<]*<' body.html | head -3 | tr '\n' ' ')
+            snippet=$(head -c 300 body.html | tr '\n\r' '  ')
+            echo "::notice title=$u::$code%0Atitle: $title%0Ah1: $h1%0Astats: $stat%0Astart: $snippet"
+          done
