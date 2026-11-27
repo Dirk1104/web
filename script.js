@@ -28,42 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Animated number counters ---
-    const animateCounters = () => {
-        document.querySelectorAll('.stat-number').forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            const duration = 1500;
-            const start = performance.now();
-
-            const update = (now) => {
-                const elapsed = now - start;
-                const progress = Math.min(elapsed / duration, 1);
-                // Ease out cubic
-                const eased = 1 - Math.pow(1 - progress, 3);
-                counter.textContent = Math.round(target * eased);
-
-                if (progress < 1) {
-                    requestAnimationFrame(update);
-                }
-            };
-
-            requestAnimationFrame(update);
-        });
-    };
-
-    // Trigger counters when hero is in view
-    const heroObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounters();
-                heroObserver.disconnect();
-            }
-        });
-    }, { threshold: 0.3 });
-
-    const heroStats = document.querySelector('.hero-stats');
-    if (heroStats) heroObserver.observe(heroStats);
-
     // --- Scroll-triggered fade-in animations ---
     const addFadeIn = () => {
         const selectors = [
